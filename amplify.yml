@@ -6,6 +6,7 @@ frontend:
         - npx pnpm install
     build:
       commands:
+        - nvm use 22.0.0
         - npx pnpm run build
   artifacts:
     baseDirectory: .next
