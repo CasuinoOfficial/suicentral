@@ -3,11 +3,10 @@ frontend:
   phases:
     preBuild:
       commands:
-        - npx pnpm install
+        - npm ci --cache .npm --prefer-offline
     build:
       commands:
-        - nvm use 22.0.0
-        - npx pnpm run build
+        - npm run build
   artifacts:
     baseDirectory: .next
     files:
@@ -15,4 +14,4 @@ frontend:
   cache:
     paths:
       - .next/cache/**/*
-      - node_modules/**/*
+      - .npm/**/*
