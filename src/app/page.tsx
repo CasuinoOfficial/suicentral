@@ -95,10 +95,10 @@ export default function Home() {
     <>
       <head>
         <title>suicentral</title>
-        <meta name="description" content="A collection of top apps on the SUI ecosystem."/>
+        <meta name="description" content="A collection of top apps on the SUI ecosystem." />
         <meta property="og:title" content="suicentral" />
-        <meta property="og:description" content="A collection of top apps on the SUI ecosystem."
-        />
+        <meta property="og:description" content="A collection of top apps on the SUI ecosystem." />
+        <meta name="robots" content="all" />
       </head>
       <div className="relative grid items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
         <img className="absolute h-full w-full object-cover -z-[1]" src={currentLink.image}/>
