@@ -92,22 +92,32 @@ export default function Home() {
   const [currentLink, setCurrentLink] = useState(links[0])
 
   return (
-    <div className="relative grid items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <img className="absolute h-full w-full object-cover -z-[1]" src={currentLink.image}/>
-      <div className="absolute bg-gradient-to-r from-neutral-950 to-40% h-full w-full object-cover -z-[1]" />
-      <header className="justify-self-start text-white">
-        <h1 className="text-[50px] font-bold text-white">suicentral</h1>
-      </header>
-      <div className="grid justify-self-start text-white">
-        <h2 className="font-semibold">{currentLink.title}</h2>
-        <div>
-        <a href={currentLink.url}>{currentLink.url} <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 -translate-y-[3px] inline-block">
-  <path fill-rule="evenodd" d="M15.75 2.25H21a.75.75 0 0 1 .75.75v5.25a.75.75 0 0 1-1.5 0V4.81L8.03 17.03a.75.75 0 0 1-1.06-1.06L19.19 3.75h-3.44a.75.75 0 0 1 0-1.5Zm-10.5 4.5a1.5 1.5 0 0 0-1.5 1.5v10.5a1.5 1.5 0 0 0 1.5 1.5h10.5a1.5 1.5 0 0 0 1.5-1.5V10.5a.75.75 0 0 1 1.5 0v8.25a3 3 0 0 1-3 3H5.25a3 3 0 0 1-3-3V8.25a3 3 0 0 1 3-3h8.25a.75.75 0 0 1 0 1.5H5.25Z" clip-rule="evenodd" />
-</svg> </a>
+    <>
+      <head>
+        <title>suicentral</title>
+        <meta name="description" content="A collection of top apps on the SUI ecosystem."/>
+        <meta property="og:title" content="suicentral" />
+        <meta property="og:description" content="A collection of top apps on the SUI ecosystem."
+        />
+      </head>
+      <div className="relative grid items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+        <img className="absolute h-full w-full object-cover -z-[1]" src={currentLink.image}/>
+        <div className="absolute bg-gradient-to-r from-neutral-950 to-40% h-full w-full object-cover -z-[1]" />
+        <header className="justify-self-start text-white">
+          <h1 className="text-[50px] font-bold text-white">suicentral</h1>
+        </header>
+        <div className="grid justify-self-start text-white">
+          <h2 className="font-semibold">{currentLink.title}</h2>
+          <div>
+          <a href={currentLink.url}>{currentLink.url} <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 -translate-y-[3px] inline-block">
+    <path fill-rule="evenodd" d="M15.75 2.25H21a.75.75 0 0 1 .75.75v5.25a.75.75 0 0 1-1.5 0V4.81L8.03 17.03a.75.75 0 0 1-1.06-1.06L19.19 3.75h-3.44a.75.75 0 0 1 0-1.5Zm-10.5 4.5a1.5 1.5 0 0 0-1.5 1.5v10.5a1.5 1.5 0 0 0 1.5 1.5h10.5a1.5 1.5 0 0 0 1.5-1.5V10.5a.75.75 0 0 1 1.5 0v8.25a3 3 0 0 1-3 3H5.25a3 3 0 0 1-3-3V8.25a3 3 0 0 1 3-3h8.25a.75.75 0 0 1 0 1.5H5.25Z" clip-rule="evenodd" />
+  </svg> </a>
+          </div>
+          <span>{currentLink.description}</span>
         </div>
-        <span>{currentLink.description}</span>
+        <CarouselSize setCurrentLink={setCurrentLink}/>
       </div>
-      <CarouselSize setCurrentLink={setCurrentLink}/>
-    </div>
+    </>
   );
+
 }
