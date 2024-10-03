@@ -61,11 +61,11 @@ function CarouselSize({setCurrentLink}:{setCurrentLink: any}) {
       opts={{
         align: "start",
       }}
-      className="w-full"
+      className="w-full max-w-xs sm:max-w-full"
     >
       <CarouselContent>
         {[...links, ...links].map((link, index) => (
-          <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/12" onClick={() => setCurrentLink(link)}>
+          <CarouselItem key={index} className="basis-1/2 sm:basis-1/12" onClick={() => setCurrentLink(link)}>
             <div className="p-1">
               <Card className="transition-all hover:scale-[115%] cursor-pointer">
                 <CardContent
@@ -80,8 +80,8 @@ function CarouselSize({setCurrentLink}:{setCurrentLink: any}) {
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious />
-      <CarouselNext />
+      {/* <CarouselPrevious />
+      <CarouselNext /> */}
     </Carousel>
   )
 }
@@ -101,7 +101,7 @@ export default function Home() {
       </head>
       <div className="relative grid items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
         <img className="absolute h-full w-full object-cover -z-[1]" src={currentLink.image}/>
-        <div className="absolute bg-gradient-to-r from-neutral-950 to-40% h-full w-full object-cover -z-[1]" />
+        <div className="absolute bg-gradient-to-b sm:bg-gradient-to-r from-neutral-950 to-60% sm:to-40% h-full w-full object-cover -z-[1]" />
         <header className="justify-self-start text-white">
           <h1 className="text-[50px] font-bold text-white">suicentral</h1>
         </header>
