@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Carousel,
   CarouselContent,
@@ -6,46 +8,78 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import Link from "next/link";
+import AppCard from "./cards/appCard";
+import { useState } from "react";
+import { cn } from "@/lib/utils";
 
-interface IAppCarouselProps {
+interface IAppCarouselProps extends React.HTMLAttributes<HTMLDivElement> {
+  appCarouselIndex: number;
   label: string;
   appList: APP_INFO[];
+  appCarouselStatus: boolean[];
+  setAppCarouselStatus: React.Dispatch<React.SetStateAction<boolean[]>>;
 }
 
-const AppCarousel = ({ label, appList }: IAppCarouselProps) => {
+const AppCarousel = ({
+  appCarouselIndex,
+  label,
+  appList,
+  className,
+  appCarouselStatus,
+  setAppCarouselStatus,
+}: IAppCarouselProps) => {
+  const batch = 6;
+
+  const cardOpen = appCarouselStatus.some((status) => status);
+
+  const batchedAppList = appList.reduce((acc, app, index) => {
+    const batchIndex = Math.floor(index / batch);
+    if (!acc[batchIndex]) {
+      acc[batchIndex] = [];
+    }
+    acc[batchIndex].push(app);
+    return acc;
+  }, [] as APP_INFO[][]);
+
   return (
-    <div className="w-full flex flex-col gap-3 pt-[1%] pb-[1.5%]">
+    <div
+      className={cn(
+        "relative w-full flex flex-col gap-3 pb-[2.5%] group",
+        className
+      )}
+    >
       <h2 className="w-full pl-[4%]">
         <span className="text-[1.4vw] font-medium drop-shadow-jumbotron-text">
           {label}
         </span>
       </h2>
-      <Carousel className="w-full overflow-hidden">
-        <CarouselContent className="mx-auto w-full pl-[4%]">
-          {[...appList].map((link, index) => (
-            <CarouselItem key={index} className="basis-[16%] pl-2">
-              <div
-                className="relative aspect-[16/9] flex flex-col justify-between items-center rounded-[4px] overflow-hidden p-1"
-                style={{
-                  background: `url(${link.jumbotron_image}) no-repeat center center fixed`,
-                  backgroundSize: "cover",
-                }}
-              >
-                {/* Upper region */}
-                <div className="w-full flex items-center justify-between h-[14%]">
-                  {/* <span>test</span>
-                  <span>test</span> */}
-                </div>
-                {/* Lower region */}
-                <div className="w-full flex items-center justify-center h-[10%]">
-                  {/* <span>test</span> */}
-                </div>
-              </div>
+      <div className="relative h-32"></div>
+      <Carousel className="absolute w-full top-12 z-[2]">
+        <CarouselContent
+          className={cn(
+            "relative mx-auto pl-[4%] pb-[5%]",
+            cardOpen && !appCarouselStatus[appCarouselIndex] && "z-[6]"
+          )}
+        >
+          {batchedAppList.map((appList, index) => (
+            <CarouselItem
+              key={`${label}-batch-${index}`}
+              className="relative w-full flex items-center h-[40%]"
+            >
+              {appList.map((app, index) => (
+                <AppCard
+                  key={`${label}-app-${index}`}
+                  index={appCarouselIndex}
+                  app={app}
+                  appCarouselStatus={appCarouselStatus}
+                  setAppCarouselStatus={setAppCarouselStatus}
+                />
+              ))}
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious />
-        <CarouselNext />
+        <CarouselPrevious className="left-0 top-0 bg-[#14141480] z-[5]" />
+        <CarouselNext className="-right-2 top-0 bg-[#14141480] z-[5]" />
       </Carousel>
     </div>
   );

@@ -1,15 +1,19 @@
 "use client";
-import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { DEFI_APP_LIST } from "@/constants";
 import Header from "@/components/header";
 import { ExternalLink } from "lucide-react";
 import AppCarousel from "@/components/appCarousel";
+import { useState } from "react";
+import { cn } from "@/lib/utils";
 
 export default function Home() {
   const defiList = Object.values(DEFI_APP_LIST);
-  const [currentLink, setCurrentLink] = useState(defiList[0]);
+  const defaultAppCarouselStatus = [false, false];
+  const [appCarouselStatus, setAppCarouselStatus] = useState(
+    defaultAppCarouselStatus
+  );
 
   return (
     <div className="relative w-full h-svh flex flex-col">
@@ -18,7 +22,7 @@ export default function Home() {
       {/* Absolute Jumbotron */}
       <Image
         className="fixed z-0"
-        src={currentLink.jumbotron_image}
+        src={DEFI_APP_LIST.doubleup.jumbotron_image}
         alt="Jumbotron"
         layout="fill"
         objectFit="cover"
@@ -64,9 +68,27 @@ export default function Home() {
         </div>
 
         {/* Apps */}
-        <div className="w-full flex flex-col mt-[9%] mb-[5%]">
-          <AppCarousel label="The most popular dApp" appList={defiList} />
-          <AppCarousel label="DeFi dApp" appList={defiList} />
+        <div className="relative w-full flex flex-col py-[10%] overflow-hidden">
+          <AppCarousel
+            appCarouselIndex={0}
+            label="The most popular dApp"
+            appList={defiList}
+            className={cn(
+              appCarouselStatus[0] ? "pointer-events-none z-[2]" : "z-[5]"
+            )}
+            appCarouselStatus={appCarouselStatus}
+            setAppCarouselStatus={setAppCarouselStatus}
+          />
+          <AppCarousel
+            appCarouselIndex={1}
+            label="DeFi dApp"
+            appList={defiList}
+            className={cn(
+              appCarouselStatus[1] ? "pointer-events-none z-[2]" : "z-[5]"
+            )}
+            appCarouselStatus={appCarouselStatus}
+            setAppCarouselStatus={setAppCarouselStatus}
+          />
         </div>
       </div>
     </div>

@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import { ArrowLeftIcon, ArrowRightIcon } from "@radix-ui/react-icons";
+import { ChevronRight, ChevronLeft } from "lucide-react";
 import useEmblaCarousel, {
   type UseEmblaCarouselType,
 } from "embla-carousel-react";
@@ -157,7 +158,7 @@ const CarouselContent = React.forwardRef<
   const { carouselRef, orientation } = useCarousel();
 
   return (
-    <div ref={carouselRef} className="overflow-hidden">
+    <div ref={carouselRef} className="">
       <div
         ref={ref}
         className={cn(
@@ -203,12 +204,11 @@ const CarouselPrevious = React.forwardRef<
   return (
     <Button
       ref={ref}
-      variant={variant}
       size={size}
       className={cn(
-        "absolute  h-8 w-8 rounded-full",
+        "absolute w-[4%] h-[62%] rounded-none",
         orientation === "horizontal"
-          ? "-left-12 top-1/2 -translate-y-1/2"
+          ? "-left-12 top-1/2"
           : "-top-12 left-1/2 -translate-x-1/2 rotate-90",
         className
       )}
@@ -216,8 +216,11 @@ const CarouselPrevious = React.forwardRef<
       onClick={scrollPrev}
       {...props}
     >
-      <ArrowLeftIcon className="h-4 w-4" />
-      <span className="sr-only">Previous slide</span>
+      <ChevronLeft
+        size={30}
+        className="opacity-0 group-hover:opacity-100 duration-300 ease-in-out"
+      />
+      {/* <span className="sr-only">Previous slide</span> */}
     </Button>
   );
 });
@@ -232,12 +235,11 @@ const CarouselNext = React.forwardRef<
   return (
     <Button
       ref={ref}
-      variant={variant}
       size={size}
       className={cn(
-        "absolute h-8 w-8 rounded-full",
+        "absolute w-[4%] h-[62%] rounded-none",
         orientation === "horizontal"
-          ? "-right-12 top-1/2 -translate-y-1/2"
+          ? "-right-12 top-1/2"
           : "-bottom-12 left-1/2 -translate-x-1/2 rotate-90",
         className
       )}
@@ -245,8 +247,11 @@ const CarouselNext = React.forwardRef<
       onClick={scrollNext}
       {...props}
     >
-      <ArrowRightIcon className="h-4 w-4" />
-      <span className="sr-only">Next slide</span>
+      <ChevronRight
+        size={30}
+        className="opacity-0 group-hover:opacity-100 duration-300 ease-in-out"
+      />
+      {/* <span className="sr-only">Next slide</span> */}
     </Button>
   );
 });

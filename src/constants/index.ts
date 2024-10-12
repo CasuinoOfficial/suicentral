@@ -5,6 +5,8 @@ export const DEFI_APP_LIST: Record<string, APP_INFO> = {
     url: "https://www.doubleup.fun",
     title: "doubleup",
     description: `Experience the ultimate in privacy and freedom with DoubleUp Sui decentralized casino. Enjoy classic casino games but without the fuss of KYC.`,
+    tagline: "Decentralized Casino on Sui",
+    tags: ["casino", "defi", "sui"],
   },
   sui: {
     jumbotron_image:
@@ -13,6 +15,8 @@ export const DEFI_APP_LIST: Record<string, APP_INFO> = {
     url: "https://sui.io/",
     title: "sui",
     description: "the official homepage for sui",
+    tagline: "Sui Network",
+    tags: ["sui"],
   },
   bucketprotocol: {
     jumbotron_image:
@@ -21,6 +25,8 @@ export const DEFI_APP_LIST: Record<string, APP_INFO> = {
     url: "https://www.bucketprotocol.io/",
     title: "bucketprotocol",
     description: "some coin thingy",
+    tagline: "Bucket Protocol",
+    tags: ["CDP", "defi"],
   },
   scallop: {
     jumbotron_image:
@@ -29,6 +35,8 @@ export const DEFI_APP_LIST: Record<string, APP_INFO> = {
     url: "https://app.scallop.io/",
     title: "scallop",
     description: "some exchange",
+    tagline: "Scallop Exchange",
+    tags: ["DEX", "defi"],
   },
   cetus: {
     jumbotron_image:
@@ -37,6 +45,8 @@ export const DEFI_APP_LIST: Record<string, APP_INFO> = {
     url: "https://app.cetus.zone/",
     title: "cetus",
     description: "some exchange",
+    tagline: "Cetus Zone",
+    tags: ["DEX", "defi"],
   },
   suilend: {
     jumbotron_image:
@@ -45,6 +55,8 @@ export const DEFI_APP_LIST: Record<string, APP_INFO> = {
     url: "https://suilend.fi/",
     title: "suilend",
     description: "some exchange",
+    tagline: "SuiLend",
+    tags: ["Lending", "defi"],
   },
   aftermath: {
     jumbotron_image:
@@ -53,5 +65,7 @@ export const DEFI_APP_LIST: Record<string, APP_INFO> = {
     url: "https://aftermath.finance/",
     title: "aftermath",
     description: "some exchange",
+    tagline: "Aftermath Finance",
+    tags: ["DEX", "defi"],
   },
 };

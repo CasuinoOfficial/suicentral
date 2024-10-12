@@ -4,4 +4,6 @@ type APP_INFO = {
   url: string;
   title: string;
   description: string;
+  tagline: string;
+  tags: string[];
 };
