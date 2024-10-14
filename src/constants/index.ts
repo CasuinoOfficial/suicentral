@@ -31,7 +31,7 @@ export const DEFI_APP_LIST: Record<string, APP_INFO> = {
     jumbotron_image: "/defi/aftermath-app.png",
     logo: "",
     url: "https://aftermath.finance/",
-    title: "aftermath",
+    title: "Aftermath",
     description: "",
     tagline: "",
     tags: ["DEX", "Liquid Staking"],

@@ -80,7 +80,8 @@ const AppCarousel = ({
               {appList.map((app, index) => (
                 <AppCard
                   key={`${label}-app-${index}`}
-                  index={appCarouselIndex}
+                  appIndex={appCarouselIndex}
+                  cardIndex={index}
                   app={app}
                   appCarouselStatus={appCarouselStatus}
                   setAppCarouselStatus={setAppCarouselStatus}

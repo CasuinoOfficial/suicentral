@@ -25,7 +25,11 @@ export default function Home() {
 
   return (
     <div className="relative w-full h-svh flex flex-col">
-      <Header />
+      {/* Hidden H1 */}
+      <div className="w-full flex items-center">
+        <h1 className="visually-hidden">SuiCentral Home Page</h1>
+        <Header />
+      </div>
 
       {/* Absolute Jumbotron */}
       {screenWidth < 1280 ? (
@@ -50,12 +54,8 @@ export default function Home() {
       <div className="w-full bg-gradient-to-b from-transparent to-black to-[65%] h-[30%] fixed z-[1] top-32 xl:top-auto xl:bottom-0" />
 
       <div className="relative w-full flex flex-col z-[2] top-0 bg-transparent mt-17">
-        {/* Hidden H1 */}
-        <div className="w-full flex items-center">
-          <h1 className="visually-hidden">SuiCentral Home Page</h1>
-        </div>
         {/* Jumbotron Content */}
-        <div className="xl:mt-[7%] 2xl:mt-[22%] px-[4%]">
+        <div className="xl:mt-[11%] 2xl:mt-[22%] px-[4%]">
           <div className="relative w-[60%] xl:w-[33%] flex flex-col gap-3">
             <Image
               className="relative w-[80%] lg:w-fit z-[5]"
@@ -68,12 +68,12 @@ export default function Home() {
             <div className="relative w-full flex flex-col gap-6 lg:pb-10 pr-2">
               {/* Content */}
               <span className="relative text-xs xl:text-lg 2xl:text-[30px] !leading-[130%] font-medium drop-shadow-jumbotron-text z-[5]">
-                {DEFI_APP_LIST.doubleup.description}
+                {GAMING_APP_LIST.doubleup.description}
               </span>
               {/* Buttons */}
               <div className="relative flex items-centergap-3 z-[5]">
                 <Link
-                  href={DEFI_APP_LIST.doubleup.url}
+                  href={GAMING_APP_LIST.doubleup.url}
                   className="font-semibold h-8 lg:h-12 pl-3 pr-2.5 lg:pl-6 lg:pr-5 py-1 rounded-[4px] flex items-center  gap-1 lg:gap-3 basic-component-statement-1"
                 >
                   <span className="text-black text-xs lg:text-lg">

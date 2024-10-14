@@ -8,7 +8,8 @@ import { ExternalLink } from "lucide-react";
 import Link from "next/link";
 
 interface IAppCardProps {
-  index: number;
+  appIndex: number;
+  cardIndex: number;
   app: APP_INFO;
   appCarouselStatus: boolean[];
   setAppCarouselStatus: React.Dispatch<React.SetStateAction<boolean[]>>;
@@ -16,7 +17,8 @@ interface IAppCardProps {
 }
 
 const AppCard = ({
-  index,
+  appIndex,
+  cardIndex,
   app,
   appCarouselStatus,
   setAppCarouselStatus,
@@ -45,7 +47,7 @@ const AppCard = ({
   useEffect(() => {
     if (isOpened) {
       const newStatus = appCarouselStatus.map(() => true);
-      newStatus[index] = false;
+      newStatus[appIndex] = false;
       setAppCarouselStatus(newStatus);
     } else {
       const newStatus = appCarouselStatus.map(() => false);
@@ -98,7 +100,7 @@ const AppCard = ({
           ? "basis-[25%]"
           : batch === 5
           ? "basis-[20%]"
-          : "basis-[16.6667%]"
+          : "basis-[16%]"
       )}
       ref={cardRef}
     >
@@ -110,7 +112,11 @@ const AppCard = ({
         className={cn(
           "absolute pl-2 cursor-pointer duration-300 ease-in-out",
           isOpened
-            ? "-top-[90%] -left-[20%] w-[150%] z-[50]"
+            ? cardIndex === 0
+              ? "-top-[90%] left-0 w-[150%] z-[50]"
+              : cardIndex === batch - 1
+              ? "-top-[90%] -left-[50%] w-[150%] z-[50]"
+              : "-top-[90%] -left-[20%] w-[150%] z-[50]"
             : "top-0 left-0 w-full z-[5] overflow-hidden"
         )}
         onMouseEnter={handleHover}
@@ -119,11 +125,11 @@ const AppCard = ({
         {/* Image */}
         <div
           className={cn(
-            "aspect-[16/9] flex flex-col justify-between items-center overflow-hidden p-1 bg-contain bg-center bg-fixed bg-no-repeat",
+            "aspect-[16/9] flex flex-col justify-between items-center overflow-hidden p-1 bg-contain bg-center bg-fixed bg-no-repeat bg-black",
             isOpened ? "rounded-t-[4px]" : "rounded-[4px]"
           )}
           style={{
-            background: `url(${
+            backgroundImage: `url(${
               app.jumbotron_image !== ""
                 ? app.jumbotron_image
                 : "/defi/sui-app.png"
@@ -143,25 +149,16 @@ const AppCard = ({
         {/* Content */}
         <div
           className={cn(
-            "w-full p-4 flex flex-col gap-3 duration-300 ease-in-out shadow-lg shadow-slate-900/60 rounded-b-[4px]",
+            "w-full p-4 flex flex-col gap-2 duration-300 ease-in-out shadow-lg shadow-slate-900/60 rounded-b-[4px]",
             isOpened ? "bg-black" : "opacity-0 h-[0px]"
           )}
         >
           <div className="w-10 aspect-square rounded-[50%] bg-white flex items-center justify-center">
             <ExternalLink className="text-black" />
           </div>
-          <span>{app.tagline}</span>
-          <div className="w-full flex items-center gap-2">
-            {app.tags.map((tag, index) => (
-              <span
-                key={`${app.title
-                  .toLowerCase()
-                  .replaceAll("", "_")}-tag-${index}`}
-              >
-                {tag}
-              </span>
-            ))}
-          </div>
+          <h3 className="text-lg font-semibold">{app.title}</h3>
+          <span className="text-white/80">{app.tagline}</span>
+          <span className="text-sm text-white/80">{app.tags.join(", ")}</span>
         </div>
       </Link>
 
