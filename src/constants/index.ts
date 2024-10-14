@@ -1,13 +1,31 @@
 export const DEFI_APP_LIST: Record<string, APP_INFO> = {
-  molefi: {
+  aftermath: {
+    jumbotron_image: "/defi/aftermath-app.png",
+    logo: "",
+    url: "https://aftermath.finance/",
+    title: "Aftermath",
+    description: "",
+    tagline: "",
+    tags: ["DEX", "Liquid Staking"],
+  },
+  navi: {
     jumbotron_image: "",
     logo: "",
-    url: "https://mole.fi/",
-    title: "Molefi",
-    description: `Mole is a DeFi protocol provided leveraged yield farming, hedge fund and savings.`,
+    url: "https://naviprotocol.io/",
+    title: "Navi",
+    description: `NAVI offers over collateralized lending/borrowing for SUI, USDC, USDT, wETH and wBTC and supports features like isolated pool, flash loan and soon to come crosschain lending/borrowing.`,
+    tagline: "",
+    tags: ["DEX"],
+  },
+  flowx: {
+    jumbotron_image: "",
+    logo: "",
+    url: "https://flowx.finance/",
+    title: "FlowX",
+    description: `FlowX Finance is the ecosystem-focused decentralized exchange built on the Sui Blockchain`,
     tagline:
-      "Mole is a DeFi protocol provided leveraged yield farming, hedge fund and savings.",
-    tags: ["Yield"],
+      "FlowX Finance is the ecosystem-focused decentralized exchange built on the Sui Blockchain",
+    tags: ["DEX"],
   },
   bucket: {
     jumbotron_image: "/defi/bucket-app.png",
@@ -18,6 +36,16 @@ export const DEFI_APP_LIST: Record<string, APP_INFO> = {
     tagline: "Bucket Protocol",
     tags: ["CDP"],
   },
+  molefi: {
+    jumbotron_image: "",
+    logo: "",
+    url: "https://mole.fi/",
+    title: "Molefi",
+    description: `Mole is a DeFi protocol provided leveraged yield farming, hedge fund and savings.`,
+    tagline:
+      "Mole is a DeFi protocol provided leveraged yield farming, hedge fund and savings.",
+    tags: ["Yield"],
+  },
   typusfinance: {
     jumbotron_image: "/defi/typus-app.png",
     logo: "",
@@ -26,15 +54,6 @@ export const DEFI_APP_LIST: Record<string, APP_INFO> = {
     description: `Real yield infrastructure on Sui`,
     tagline: "Real yield infrastructure on Sui",
     tags: ["Yield"],
-  },
-  aftermath: {
-    jumbotron_image: "/defi/aftermath-app.png",
-    logo: "",
-    url: "https://aftermath.finance/",
-    title: "Aftermath",
-    description: "",
-    tagline: "",
-    tags: ["DEX", "Liquid Staking"],
   },
   cetus: {
     jumbotron_image: "/defi/cetus-app.webp",
@@ -83,15 +102,6 @@ export const DEFI_APP_LIST: Record<string, APP_INFO> = {
     tagline: "",
     tags: ["Perpetuals", "Aggretator"],
   },
-  navi: {
-    jumbotron_image: "",
-    logo: "",
-    url: "https://naviprotocol.io/",
-    title: "Navi",
-    description: `NAVI offers over collateralized lending/borrowing for SUI, USDC, USDT, wETH and wBTC and supports features like isolated pool, flash loan and soon to come crosschain lending/borrowing.`,
-    tagline: "",
-    tags: ["DEX"],
-  },
   suilend: {
     jumbotron_image: "/defi/suilend-app.png",
     logo: "",
@@ -122,16 +132,6 @@ export const DEFI_APP_LIST: Record<string, APP_INFO> = {
     tagline:
       "Premier Yield Optimizer on the SUI Blockchain. Earn Safe, Real Yields with AlphaFi.",
     tags: ["Yield Aggregator"],
-  },
-  flowx: {
-    jumbotron_image: "",
-    logo: "",
-    url: "https://flowx.finance/",
-    title: "FlowX",
-    description: `FlowX Finance is the ecosystem-focused decentralized exchange built on the Sui Blockchain`,
-    tagline:
-      "FlowX Finance is the ecosystem-focused decentralized exchange built on the Sui Blockchain",
-    tags: ["DEX"],
   },
   bluefin: {
     jumbotron_image: "",

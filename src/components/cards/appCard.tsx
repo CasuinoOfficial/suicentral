@@ -34,7 +34,7 @@ const AppCard = ({
   const handleHover = () => {
     timeoutRef.current = setTimeout(() => {
       setIsOpened(true);
-    }, 1000);
+    }, 500);
   };
 
   const handleLeave = () => {

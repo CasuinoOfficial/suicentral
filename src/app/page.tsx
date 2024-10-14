@@ -85,22 +85,22 @@ export default function Home() {
         {/* Apps */}
         <div className="relative w-full flex flex-col py-[10%] 2xl:pt-[6%] overflow-hidden">
           <AppCarousel
-            appCarouselIndex={0}
-            label="DeFi dApp"
-            appList={defiList}
+            appCarouselIndex={1}
+            label="Gaming Apps"
+            appList={gamingList}
             className={cn(
-              appCarouselStatus[0] ? "pointer-events-none z-[2]" : "z-[5]"
+              appCarouselStatus[1] ? "pointer-events-none z-[2]" : "z-[5]"
             )}
             appCarouselStatus={appCarouselStatus}
             setAppCarouselStatus={setAppCarouselStatus}
             screenWidth={screenWidth}
           />
           <AppCarousel
-            appCarouselIndex={1}
-            label="Gaming dApp"
-            appList={gamingList}
+            appCarouselIndex={0}
+            label="DeFi Apps"
+            appList={defiList}
             className={cn(
-              appCarouselStatus[1] ? "pointer-events-none z-[2]" : "z-[5]"
+              appCarouselStatus[0] ? "pointer-events-none z-[2]" : "z-[5]"
             )}
             appCarouselStatus={appCarouselStatus}
             setAppCarouselStatus={setAppCarouselStatus}
