@@ -186,7 +186,7 @@ const CarouselItem = React.forwardRef<
       aria-roledescription="slide"
       className={cn(
         "min-w-0 shrink-0 grow-0 basis-full",
-        orientation === "horizontal" ? "pl-4" : "pt-4",
+        orientation === "horizontal" ? "pl-1 xl:pl-2" : "pt-4",
         className
       )}
       {...props}
@@ -206,7 +206,7 @@ const CarouselPrevious = React.forwardRef<
       ref={ref}
       size={size}
       className={cn(
-        "absolute w-[4%] h-[62%] rounded-none",
+        "absolute w-[4%] h-[71%] xl:h-[62%] rounded-none",
         orientation === "horizontal"
           ? "-left-12 top-1/2"
           : "-top-12 left-1/2 -translate-x-1/2 rotate-90",
@@ -218,7 +218,7 @@ const CarouselPrevious = React.forwardRef<
     >
       <ChevronLeft
         size={30}
-        className="opacity-0 group-hover:opacity-100 duration-300 ease-in-out"
+        className="opacity-100 xl:opacity-0 group-hover:opacity-100 duration-300 ease-in-out"
       />
       {/* <span className="sr-only">Previous slide</span> */}
     </Button>
@@ -237,7 +237,7 @@ const CarouselNext = React.forwardRef<
       ref={ref}
       size={size}
       className={cn(
-        "absolute w-[4%] h-[62%] rounded-none",
+        "absolute w-[4%] h-[71%] xl:h-[62%] rounded-none",
         orientation === "horizontal"
           ? "-right-12 top-1/2"
           : "-bottom-12 left-1/2 -translate-x-1/2 rotate-90",
@@ -249,7 +249,7 @@ const CarouselNext = React.forwardRef<
     >
       <ChevronRight
         size={30}
-        className="opacity-0 group-hover:opacity-100 duration-300 ease-in-out"
+        className="opacity-100 xl:opacity-0 group-hover:opacity-100 duration-300 ease-in-out"
       />
       {/* <span className="sr-only">Next slide</span> */}
     </Button>

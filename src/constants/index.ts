@@ -146,7 +146,7 @@ export const DEFI_APP_LIST: Record<string, APP_INFO> = {
 
 export const GAMING_APP_LIST: Record<string, APP_INFO> = {
   doubleup: {
-    jumbotron_image: "/gaming/Diamond Only.png",
+    jumbotron_image: "/gaming/Diamond_Only.png",
     logo: "/gaming/doubleup-text-logo_380_120.png",
     url: "https://www.doubleup.fun",
     title: "doubleup",
@@ -181,7 +181,7 @@ export const GAMING_APP_LIST: Record<string, APP_INFO> = {
     tagline: "",
     tags: [""],
   },
-  fishingstar: {
+  cryptocatchfishingstar: {
     jumbotron_image: "",
     logo: "",
     url: "",
@@ -190,7 +190,7 @@ export const GAMING_APP_LIST: Record<string, APP_INFO> = {
     tagline: "",
     tags: [""],
   },
-  winx: {
+  "winx.io": {
     jumbotron_image: "/gaming/winx-app.png",
     logo: "",
     url: "https://winx.io/",
@@ -303,6 +303,23 @@ export const MEMECOINS_APP_LIST: Record<string, APP_INFO> = {
     logo: "",
     url: "",
     title: "PUP",
+    description: ``,
+    tagline: "",
+    tags: [""],
+  },
+};
+
+export const ALL_APP_LIST: Record<string, APP_INFO> = {
+  ...DEFI_APP_LIST,
+  ...GAMING_APP_LIST,
+  ...ETC_APP_LIST,
+  ...SOCIAL_APP_LIST,
+  ...MEMECOINS_APP_LIST,
+  eample: {
+    jumbotron_image: "",
+    logo: "",
+    url: "",
+    title: "",
     description: ``,
     tagline: "",
     tags: [""],
