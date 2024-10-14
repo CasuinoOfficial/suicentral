@@ -116,8 +116,12 @@ const AppCarousel = ({
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="left-0 top-0 bg-[#14141480] z-[5]" />
-          <CarouselNext className="right-0 xl:-right-2 top-0 bg-[#14141480] z-[5]" />
+          {batchedAppList.length > 1 && (
+            <>
+              <CarouselPrevious className="left-0 top-0 bg-[#14141480] z-[5]" />
+              <CarouselNext className="right-0 xl:-right-2 top-0 bg-[#14141480] z-[5]" />
+            </>
+          )}
         </Carousel>
         {/* Mobile Modal */}
         <DialogContent className="w-[90%] min-h-80 flex flex-col items-center rounded-md border-none !outline-none !ring-0 bg-[#141414] overflow-hidden gap-2 p-4 md:pt-12 md:px-6 !pb-6">
