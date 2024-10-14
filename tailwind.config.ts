@@ -10,12 +10,19 @@ const config: Config = {
   theme: {
     extend: {
       spacing: {
+        5.5: "1.375rem",
         9.6: "2.4rem",
         17: "4.25rem",
         26: "6.5rem",
+        30: "7.5rem",
+        32: "8rem",
+        35: "8.75rem",
         102.5: "25.625rem",
         104: "26rem",
         110: "27.5rem",
+        180: "45rem",
+        190: "47.5rem",
+        200: "50rem",
       },
       colors: {
         background: "hsl(var(--background))",

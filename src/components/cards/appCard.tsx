@@ -12,6 +12,7 @@ interface IAppCardProps {
   app: APP_INFO;
   appCarouselStatus: boolean[];
   setAppCarouselStatus: React.Dispatch<React.SetStateAction<boolean[]>>;
+  batch: number;
 }
 
 const AppCard = ({
@@ -19,6 +20,7 @@ const AppCard = ({
   app,
   appCarouselStatus,
   setAppCarouselStatus,
+  batch,
 }: IAppCardProps) => {
   const [isOpened, setIsOpened] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
@@ -85,7 +87,21 @@ const AppCard = ({
   }, []);
 
   return (
-    <div className="relative basis-[16%] pl-2" ref={cardRef}>
+    <div
+      className={cn(
+        "relative pl-2",
+        batch === 2
+          ? "basis-[60%]"
+          : batch === 3
+          ? "basis-[33.3333%]"
+          : batch === 4
+          ? "basis-[25%]"
+          : batch === 5
+          ? "basis-[20%]"
+          : "basis-[16.6667%]"
+      )}
+      ref={cardRef}
+    >
       {/* Transparent Spot */}
       <div className="relative aspect-[16/9] bg-transparent" />
       {/* Real Content */}
@@ -103,12 +119,15 @@ const AppCard = ({
         {/* Image */}
         <div
           className={cn(
-            "aspect-[16/9] flex flex-col justify-between items-center overflow-hidden p-1",
+            "aspect-[16/9] flex flex-col justify-between items-center overflow-hidden p-1 bg-contain bg-center bg-fixed bg-no-repeat",
             isOpened ? "rounded-t-[4px]" : "rounded-[4px]"
           )}
           style={{
-            background: `url(${app.jumbotron_image}) no-repeat center center fixed`,
-            backgroundSize: "cover",
+            background: `url(${
+              app.jumbotron_image !== ""
+                ? app.jumbotron_image
+                : "/defi/sui-app.png"
+            })`,
           }}
         >
           {/* Upper region */}
@@ -134,7 +153,13 @@ const AppCard = ({
           <span>{app.tagline}</span>
           <div className="w-full flex items-center gap-2">
             {app.tags.map((tag, index) => (
-              <span>{tag}</span>
+              <span
+                key={`${app.title
+                  .toLowerCase()
+                  .replaceAll("", "_")}-tag-${index}`}
+              >
+                {tag}
+              </span>
             ))}
           </div>
         </div>

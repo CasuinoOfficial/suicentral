@@ -22,7 +22,9 @@ const Header = () => {
         isScrolled ? "bg-black" : "bg-gradient-to-b from-black to-transparent"
       )}
     >
-      <span className="text-white text-4xl font-bold relative">SuiCentral</span>
+      <span className="text-white text-3xl xl:text-4xl font-bold relative">
+        SuiCentral
+      </span>
     </header>
   );
 };
