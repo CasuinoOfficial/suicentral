@@ -148,7 +148,7 @@ export const GAMING_APP_LIST: Record<string, APP_INFO> = {
   doubleup: {
     jumbotron_image: "/gaming/Diamond_Only.png",
     logo: "/gaming/doubleup-text-logo_380_120.png",
-    url: "https://www.doubleup.fun",
+    url: "https://www.doubleup.fun/game/coinflip",
     title: "doubleup",
     description: `Experience the ultimate in privacy and freedom with DoubleUp Sui decentralized casino. Enjoy classic casino games but without the fuss of KYC.`,
     tagline: "Decentralized Casino on Sui",
