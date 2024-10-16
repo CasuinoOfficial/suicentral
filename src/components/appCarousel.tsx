@@ -21,7 +21,8 @@ import {
 } from "@/components/ui/dialog";
 import { ALL_APP_LIST } from "@/constants";
 import { ExternalLink, X } from "lucide-react";
-
+import SocialMediaIcon from "@/components/buttons/socialMediaIcon";
+import { FaTelegram, FaTwitter } from "react-icons/fa";
 interface IAppCarouselProps extends React.HTMLAttributes<HTMLDivElement> {
   appCarouselIndex: number;
   label: string;
@@ -136,18 +137,29 @@ const AppCarousel = ({
               {displayApp?.title}
             </span>
 
-            <Link
-              href={displayApp?.url ?? ""}
-              className="relative w-fit font-semibold h-7 md:h-8 pl-3 pr-2.5 py-1 rounded-[4px] flex items-center gap-1 basic-component-statement-1 z-[6] mt-10"
-            >
-              <span className="text-black text-[10px] md:text-xs">
-                Launch App
-              </span>
-              <ExternalLink
-                className="text-black"
-                size={screenWidth < 768 ? 12 : 16}
-              />
-            </Link>
+            <div className="relative w-full flex items-center gap-3 z-[6] mt-10">
+              <Link
+                href={displayApp?.url ?? ""}
+                className="relative w-fit font-semibold h-7 md:h-8 pl-3 pr-2.5 py-1 rounded-[4px] flex items-center gap-1 basic-component-statement-1"
+              >
+                <span className="text-black text-[10px] md:text-xs">
+                  Launch App
+                </span>
+                {/* <ExternalLink
+                  className="text-black"
+                  size={screenWidth < 768 ? 12 : 16}
+                /> */}
+              </Link>
+              {displayApp?.twitter && displayApp?.twitter !== "" && (
+                <SocialMediaIcon
+                  url={displayApp?.twitter}
+                  Icon={FaTwitter}
+                  color="#ffffff"
+                  iconClass="text-[24px]"
+                />
+              )}
+            </div>
+
             {/* absolute */}
             <div className="absolute w-full h-full top-0 bg-gradient-to-r from-black to-transparent blur-[30px] z-[5]" />
           </div>

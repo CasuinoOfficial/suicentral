@@ -6,4 +6,6 @@ type APP_INFO = {
   description: string;
   tagline: string;
   tags: string[];
+  twitter?: string;
+  telegram?: string;
 };

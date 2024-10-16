@@ -14,6 +14,8 @@ import { useState } from "react";
 import { cn } from "@/lib/utils";
 import useMediaSize from "@/hooks/useMediaSize";
 import { Dialog } from "@/components/ui/dialog";
+import { FaTelegram, FaTwitter } from "react-icons/fa";
+import SocialMediaIcon from "@/components/buttons/socialMediaIcon";
 
 export default function Home() {
   const screenWidth = useMediaSize();
@@ -23,6 +25,7 @@ export default function Home() {
   const [appCarouselStatus, setAppCarouselStatus] = useState(
     defaultAppCarouselStatus
   );
+  const jumbotronApp = GAMING_APP_LIST.doubleup;
 
   return (
     <div className="relative w-full h-svh flex flex-col">
@@ -58,22 +61,30 @@ export default function Home() {
             <div className="relative w-full flex flex-col gap-6 lg:pb-10 pr-2">
               {/* Content */}
               <span className="relative text-xs xl:text-lg 2xl:text-[30px] !leading-[130%] font-medium drop-shadow-jumbotron-text z-[5]">
-                {GAMING_APP_LIST.doubleup.description}
+                {jumbotronApp?.description}
               </span>
               {/* Buttons */}
-              <div className="relative flex items-centergap-3 z-[5]">
+              <div className="relative flex items-center gap-3 lg:gap-4 z-[5]">
                 <Link
-                  href={GAMING_APP_LIST.doubleup.url}
+                  href={jumbotronApp?.url}
                   className="font-semibold h-8 xl:h-12 pl-3 pr-2.5 xl:pl-6 xl:pr-5 py-1 rounded-[4px] flex items-center gap-1 xl:gap-3 basic-component-statement-1"
                 >
                   <span className="text-black text-xs xl:text-lg">
                     Launch App
                   </span>
-                  <ExternalLink
+                  {/* <ExternalLink
                     className="text-black"
                     size={screenWidth < 1280 ? 16 : 24}
-                  />
+                  /> */}
                 </Link>
+                {jumbotronApp?.twitter && jumbotronApp?.twitter !== "" && (
+                  <SocialMediaIcon
+                    url={jumbotronApp?.twitter}
+                    Icon={FaTwitter}
+                    color="#ffffff"
+                    iconClass="text-[24px] xl:text-[28px]"
+                  />
+                )}
               </div>
             </div>
 

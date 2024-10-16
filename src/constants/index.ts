@@ -7,6 +7,7 @@ export const DEFI_APP_LIST: Record<string, APP_INFO> = {
     description: "The ease of a centralized exchange with none of the risk.",
     tagline: "Cex On-Chain",
     tags: ["Aggretator", "DEX", "Liquid Staking"],
+    twitter: "",
   },
   navi: {
     jumbotron_image: "/defi/navi-app.png",
@@ -16,6 +17,7 @@ export const DEFI_APP_LIST: Record<string, APP_INFO> = {
     description: `NAVI offers over collateralized lending/borrowing for SUI, USDC, USDT, wETH and wBTC and supports features like isolated pool, flash loan and soon to come crosschain lending/borrowing.`,
     tagline: "Lending platform on Sui",
     tags: ["Lending"],
+    twitter: "",
   },
   flowx: {
     jumbotron_image: "/defi/flowx-app.png",
@@ -26,6 +28,7 @@ export const DEFI_APP_LIST: Record<string, APP_INFO> = {
     tagline:
       "FlowX Finance is the ecosystem-focused decentralized exchange built on the Sui Blockchain",
     tags: ["DEX"],
+    twitter: "",
   },
   bucket: {
     jumbotron_image: "/defi/bucket-app.png",
@@ -35,6 +38,7 @@ export const DEFI_APP_LIST: Record<string, APP_INFO> = {
     description: "some coin thingy",
     tagline: "Bucket Protocol",
     tags: ["CDP"],
+    twitter: "",
   },
   molefi: {
     jumbotron_image: "/defi/molefi-app.png",
@@ -45,6 +49,7 @@ export const DEFI_APP_LIST: Record<string, APP_INFO> = {
     tagline:
       "Mole is a DeFi protocol provided leveraged yield farming, hedge fund and savings.",
     tags: ["Yield"],
+    twitter: "",
   },
   typusfinance: {
     jumbotron_image: "/defi/typus-app.png",
@@ -54,6 +59,7 @@ export const DEFI_APP_LIST: Record<string, APP_INFO> = {
     description: `Real yield infrastructure on Sui`,
     tagline: "Real yield infrastructure on Sui",
     tags: ["Yield"],
+    twitter: "",
   },
   cetus: {
     jumbotron_image: "/defi/cetus-app.webp",
@@ -64,6 +70,7 @@ export const DEFI_APP_LIST: Record<string, APP_INFO> = {
       "Cetus is a pioneer DEX and concentrated liquidity protocol focusing on Move-based ecosystems like Aptos and Sui. It works as a crucial part of the ecosystem infrastructure to satisfy the comprehensive needs of traders, LPs, upper applications and an increasing DeFi population.",
     tagline: "",
     tags: ["DEX"],
+    twitter: "",
   },
   turbos: {
     jumbotron_image: "/defi/turbos-app.png",
@@ -74,6 +81,7 @@ export const DEFI_APP_LIST: Record<string, APP_INFO> = {
       "A hyper-efficient decentralized crypto marketplace built on Sui",
     tagline: "A hyper-efficient decentralized crypto marketplace built on Sui",
     tags: ["DEX"],
+    twitter: "",
   },
   kriya: {
     jumbotron_image: "/defi/kryia-app.png",
@@ -83,6 +91,7 @@ export const DEFI_APP_LIST: Record<string, APP_INFO> = {
     description: `1-stop DeFi protocol on Sui. Offering Swaps, Limit Orders, 1-click leverage lending strategies, Yield Optimiser Vaults and 20x perps`,
     tagline: "",
     tags: ["Yield", "Swaps", "Leverage", "Perpetuals"],
+    twitter: "",
   },
   sudofinance: {
     jumbotron_image: "/defi/sudo-app.png",
@@ -92,6 +101,7 @@ export const DEFI_APP_LIST: Record<string, APP_INFO> = {
     description: `Sudo is the first protocol that provides you access to a wide range of perpetual assets within the Sui ecosystem. As the first perpetuals aggregator platform, Sudo aims to provide the best perpetuals trading experience to tadres on Sui. `,
     tagline: "",
     tags: ["Perpetuals", "Aggretator"],
+    twitter: "",
   },
   suilend: {
     jumbotron_image: "/defi/suilend-app.png",
@@ -103,6 +113,7 @@ export const DEFI_APP_LIST: Record<string, APP_INFO> = {
     tagline:
       "Suilend is a lending protocol on Sui, built by the team behind Solend.",
     tags: ["Lending"],
+    twitter: "",
   },
   scallop: {
     jumbotron_image: "/defi/scallop-app.jpg",
@@ -113,6 +124,7 @@ export const DEFI_APP_LIST: Record<string, APP_INFO> = {
       "Scallop is the pioneering Next Generation Money Market for the Sui ecosystem which emphasizes institutional-grade quality, enhanced composability, and robust security.",
     tagline: "",
     tags: ["Lending"],
+    twitter: "",
   },
   alphafi: {
     jumbotron_image: "/defi/alphafi-app.png",
@@ -123,6 +135,7 @@ export const DEFI_APP_LIST: Record<string, APP_INFO> = {
     tagline:
       "Premier Yield Optimizer on the SUI Blockchain. Earn Safe, Real Yields with AlphaFi.",
     tags: ["Yield Aggregator"],
+    twitter: "",
   },
   bluefin: {
     jumbotron_image: "/defi/bluefin-app.png",
@@ -132,6 +145,7 @@ export const DEFI_APP_LIST: Record<string, APP_INFO> = {
     description: `Bluefin is a decentralized orderbook-based exchange built for both professional and first-time traders. It focuses on security, transparency and redefining the user experience of using on-chain trading platforms - and is backed by Polychain, SIG, Brevan Howard, and other leading firms`,
     tagline: "A Financial Network With Parallelized Performance",
     tags: ["Trading"],
+    twitter: "",
   },
 };
 
@@ -144,6 +158,7 @@ export const GAMING_APP_LIST: Record<string, APP_INFO> = {
     description: `Enjoy classic games but without the fuss of KYC.`,
     tagline: "Decentralized gaming platform on Sui",
     tags: ["Gaming"],
+    twitter: "https://x.com/doubleup_app",
   },
   panzerdogs: {
     jumbotron_image: "/gaming/panzerdogs-app.png",
@@ -153,15 +168,18 @@ export const GAMING_APP_LIST: Record<string, APP_INFO> = {
     description: "An exciting top down shooter featuring cute dogs.",
     tagline: "pew pew pew",
     tags: ["Gaming"],
+    twitter: "",
   },
   cosmocadia: {
     jumbotron_image: "/gaming/cosmocadia-app.png",
     logo: "",
     url: "https://www.cosmocadia.io/",
     title: "Cosmocadia",
-    description: "Embark on an epic journey armed with your trusty axe, as you shape and cultivate an entire world. Delve into exploration, harvest resources, construct, cultivate, and master the art of crafting to forge your utopia. Prove your mayoral prowess in this captivating and addictive casual simulator.",
+    description:
+      "Embark on an epic journey armed with your trusty axe, as you shape and cultivate an entire world. Delve into exploration, harvest resources, construct, cultivate, and master the art of crafting to forge your utopia. Prove your mayoral prowess in this captivating and addictive casual simulator.",
     tagline: "",
     tags: ["Gaming"],
+    twitter: "",
   },
   cryptocatchfishingstar: {
     jumbotron_image: "/gaming/fishing-app.png",
@@ -171,6 +189,7 @@ export const GAMING_APP_LIST: Record<string, APP_INFO> = {
     description: "Hypercasual fishing game on Sui",
     tagline: "fish fish fish",
     tags: ["Gaming"],
+    twitter: "",
   },
   "winx.io": {
     jumbotron_image: "/gaming/winx-app.png",
@@ -180,6 +199,7 @@ export const GAMING_APP_LIST: Record<string, APP_INFO> = {
     description: `A crypto casino from the future `,
     tagline: "A crypto casino from the future ",
     tags: ["Casino"],
+    twitter: "",
   },
 };
 
@@ -192,6 +212,7 @@ export const ETC_APP_LIST: Record<string, APP_INFO> = {
     description: `Blockchain Research Firm`,
     tagline: "",
     tags: [""],
+    twitter: "",
   },
 };
 
@@ -204,6 +225,7 @@ export const SOCIAL_APP_LIST: Record<string, APP_INFO> = {
     description: ``,
     tagline: "",
     tags: [""],
+    twitter: "",
   },
   mirai: {
     jumbotron_image: "",
@@ -213,6 +235,7 @@ export const SOCIAL_APP_LIST: Record<string, APP_INFO> = {
     description: ``,
     tagline: "",
     tags: [""],
+    twitter: "",
   },
   citizens: {
     jumbotron_image: "",
@@ -222,6 +245,7 @@ export const SOCIAL_APP_LIST: Record<string, APP_INFO> = {
     description: ``,
     tagline: "",
     tags: [""],
+    twitter: "",
   },
   rinoco: {
     jumbotron_image: "",
@@ -231,6 +255,7 @@ export const SOCIAL_APP_LIST: Record<string, APP_INFO> = {
     description: ``,
     tagline: "",
     tags: [""],
+    twitter: "",
   },
 };
 
@@ -243,6 +268,7 @@ export const MEMECOINS_APP_LIST: Record<string, APP_INFO> = {
     description: ``,
     tagline: "",
     tags: [""],
+    twitter: "",
   },
   liq: {
     jumbotron_image: "",
@@ -252,6 +278,7 @@ export const MEMECOINS_APP_LIST: Record<string, APP_INFO> = {
     description: ``,
     tagline: "",
     tags: [""],
+    twitter: "",
   },
   seb: {
     jumbotron_image: "",
@@ -261,6 +288,7 @@ export const MEMECOINS_APP_LIST: Record<string, APP_INFO> = {
     description: ``,
     tagline: "",
     tags: [""],
+    twitter: "",
   },
   blub: {
     jumbotron_image: "",
@@ -270,6 +298,7 @@ export const MEMECOINS_APP_LIST: Record<string, APP_INFO> = {
     description: ``,
     tagline: "",
     tags: [""],
+    twitter: "",
   },
   aaacat: {
     jumbotron_image: "",
@@ -279,6 +308,7 @@ export const MEMECOINS_APP_LIST: Record<string, APP_INFO> = {
     description: ``,
     tagline: "",
     tags: [""],
+    twitter: "",
   },
   pup: {
     jumbotron_image: "",
@@ -288,6 +318,7 @@ export const MEMECOINS_APP_LIST: Record<string, APP_INFO> = {
     description: ``,
     tagline: "",
     tags: [""],
+    twitter: "",
   },
 };
 
@@ -305,6 +336,7 @@ export const ALL_APP_LIST: Record<string, APP_INFO> = {
     description: ``,
     tagline: "",
     tags: [""],
+    twitter: "",
   },
 };
 
@@ -317,5 +349,6 @@ export const EXAMPLE_APP_LIST: Record<string, APP_INFO> = {
     description: ``,
     tagline: "",
     tags: [""],
+    twitter: "",
   },
 };
