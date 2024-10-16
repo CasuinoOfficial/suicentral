@@ -21,7 +21,8 @@ export default function Home() {
   const screenWidth = useMediaSize();
   const defiList = Object.values(DEFI_APP_LIST);
   const gamingList = Object.values(GAMING_APP_LIST);
-  const defaultAppCarouselStatus = [false, false];
+  const memecoinsList = Object.values(MEMECOINS_APP_LIST);
+  const defaultAppCarouselStatus = [false, false, false];
   const [appCarouselStatus, setAppCarouselStatus] = useState(
     defaultAppCarouselStatus
   );
@@ -60,7 +61,7 @@ export default function Home() {
             {/* Description */}
             <div className="relative w-full flex flex-col gap-6 lg:pb-10 pr-2">
               {/* Content */}
-              <span className="relative text-xs xl:text-lg 2xl:text-[30px] !leading-[130%] font-medium drop-shadow-jumbotron-text z-[5]">
+              <span className="relative h-12 xl:h-20 text-xs xl:text-lg 2xl:text-[30px] !leading-[130%] font-medium drop-shadow-jumbotron-text z-[5]">
                 {jumbotronApp?.description}
               </span>
               {/* Buttons */}
@@ -100,7 +101,7 @@ export default function Home() {
             label="Gaming Apps"
             appList={gamingList}
             className={cn(
-              appCarouselStatus[1] ? "pointer-events-none z-[2]" : "z-[5]"
+              appCarouselStatus[0] ? "pointer-events-none z-[2]" : "z-[5]"
             )}
             appCarouselStatus={appCarouselStatus}
             setAppCarouselStatus={setAppCarouselStatus}
@@ -111,7 +112,18 @@ export default function Home() {
             label="DeFi Apps"
             appList={defiList}
             className={cn(
-              appCarouselStatus[0] ? "pointer-events-none z-[2]" : "z-[5]"
+              appCarouselStatus[1] ? "pointer-events-none z-[2]" : "z-[5]"
+            )}
+            appCarouselStatus={appCarouselStatus}
+            setAppCarouselStatus={setAppCarouselStatus}
+            screenWidth={screenWidth}
+          />
+          <AppCarousel
+            appCarouselIndex={0}
+            label="Memecoins"
+            appList={memecoinsList}
+            className={cn(
+              appCarouselStatus[2] ? "pointer-events-none z-[2]" : "z-[5]"
             )}
             appCarouselStatus={appCarouselStatus}
             setAppCarouselStatus={setAppCarouselStatus}

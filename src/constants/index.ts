@@ -154,7 +154,7 @@ export const GAMING_APP_LIST: Record<string, APP_INFO> = {
     jumbotron_image: "/gaming/Diamond_Only.png",
     logo: "/gaming/doubleup-text-logo_380_120.png",
     url: "https://www.doubleup.fun/game/coinflip",
-    title: "doubleup",
+    title: "DoubleUp",
     description: `Enjoy classic games but without the fuss of KYC.`,
     tagline: "Decentralized gaming platform on Sui",
     tags: ["Gaming"],
