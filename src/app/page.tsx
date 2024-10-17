@@ -6,6 +6,7 @@ import {
   GAMING_APP_LIST,
   SOCIAL_APP_LIST,
   MEMECOINS_APP_LIST,
+  ETC_APP_LIST,
 } from "@/constants";
 import Header from "@/components/header";
 import { ExternalLink } from "lucide-react";
@@ -16,13 +17,23 @@ import useMediaSize from "@/hooks/useMediaSize";
 import { Dialog } from "@/components/ui/dialog";
 import { FaTelegram, FaTwitter } from "react-icons/fa";
 import SocialMediaIcon from "@/components/buttons/socialMediaIcon";
+import { label } from "framer-motion/client";
 
 export default function Home() {
   const screenWidth = useMediaSize();
   const defiList = Object.values(DEFI_APP_LIST);
   const gamingList = Object.values(GAMING_APP_LIST);
   const memecoinsList = Object.values(MEMECOINS_APP_LIST);
-  const defaultAppCarouselStatus = [false, false, false];
+  const socialList = Object.values(SOCIAL_APP_LIST);
+  const etcList = Object.values(ETC_APP_LIST);
+  const appList = [
+    { label: "Gaming Apps", list: gamingList },
+    { label: "DeFi Apps", list: defiList },
+    { label: "Memecoins", list: memecoinsList },
+    { label: "Socials", list: socialList },
+    { label: "ETCs", list: etcList },
+  ];
+  const defaultAppCarouselStatus = appList.map(() => false);
   const [appCarouselStatus, setAppCarouselStatus] = useState(
     defaultAppCarouselStatus
   );
@@ -96,39 +107,20 @@ export default function Home() {
 
         {/* Apps */}
         <div className="relative w-full flex flex-col py-[10%] 2xl:pt-[6%] overflow-hidden">
-          <AppCarousel
-            appCarouselIndex={1}
-            label="Gaming Apps"
-            appList={gamingList}
-            className={cn(
-              appCarouselStatus[0] ? "pointer-events-none z-[2]" : "z-[5]"
-            )}
-            appCarouselStatus={appCarouselStatus}
-            setAppCarouselStatus={setAppCarouselStatus}
-            screenWidth={screenWidth}
-          />
-          <AppCarousel
-            appCarouselIndex={0}
-            label="DeFi Apps"
-            appList={defiList}
-            className={cn(
-              appCarouselStatus[1] ? "pointer-events-none z-[2]" : "z-[5]"
-            )}
-            appCarouselStatus={appCarouselStatus}
-            setAppCarouselStatus={setAppCarouselStatus}
-            screenWidth={screenWidth}
-          />
-          <AppCarousel
-            appCarouselIndex={0}
-            label="Memecoins"
-            appList={memecoinsList}
-            className={cn(
-              appCarouselStatus[2] ? "pointer-events-none z-[2]" : "z-[5]"
-            )}
-            appCarouselStatus={appCarouselStatus}
-            setAppCarouselStatus={setAppCarouselStatus}
-            screenWidth={screenWidth}
-          />
+          {appList.map((app, index) => (
+            <AppCarousel
+              key={`${app}-carousel-${index}`}
+              appCarouselIndex={index}
+              label={app.label}
+              appList={app.list}
+              className={cn(
+                appCarouselStatus[index] ? "pointer-events-none z-[2]" : "z-[5]"
+              )}
+              appCarouselStatus={appCarouselStatus}
+              setAppCarouselStatus={setAppCarouselStatus}
+              screenWidth={screenWidth}
+            />
+          ))}
         </div>
       </div>
     </div>
