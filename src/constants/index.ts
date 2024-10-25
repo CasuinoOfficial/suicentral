@@ -151,7 +151,7 @@ export const DEFI_APP_LIST: Record<string, APP_INFO> = {
 
 export const GAMING_APP_LIST: Record<string, APP_INFO> = {
   doubleup: {
-    jumbotron_image: "/gaming/Diamond_Only.png",
+    jumbotron_image: "/gaming/doubleup-jumbotron.png",
     logo: "/gaming/doubleup-text-logo_380_120.png",
     url: "https://www.doubleup.fun/game/coinflip",
     title: "DoubleUp",
@@ -271,14 +271,14 @@ export const MEMECOINS_APP_LIST: Record<string, APP_INFO> = {
     twitter: "",
   },
   liq: {
-    jumbotron_image: "",
+    jumbotron_image: "/memecoins/liquor-jumbotron.jpeg",
     logo: "",
     url: "",
     title: "LIQ",
-    description: ``,
-    tagline: "",
+    description: `Be liquor, my friend. New era of meme on Sui. `,
+    tagline: "Be liquor, my friend. New era of meme on Sui. ",
     tags: [""],
-    twitter: "",
+    twitter: "https://x.com/Beliquoronsui",
   },
   seb: {
     jumbotron_image: "",
