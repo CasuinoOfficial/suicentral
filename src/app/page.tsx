@@ -14,10 +14,8 @@ import AppCarousel from "@/components/appCarousel";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 import useMediaSize from "@/hooks/useMediaSize";
-import { Dialog } from "@/components/ui/dialog";
-import { FaTelegram, FaTwitter } from "react-icons/fa";
-import SocialMediaIcon from "@/components/buttons/socialMediaIcon";
-import { label } from "framer-motion/client";
+import { FaTelegram } from "react-icons/fa";
+import TwitterIconLink from "@/components/buttons/twitterIcon";
 
 export default function Home() {
   const screenWidth = useMediaSize();
@@ -90,12 +88,17 @@ export default function Home() {
                   /> */}
                 </Link>
                 {jumbotronApp?.twitter && jumbotronApp?.twitter !== "" && (
-                  <SocialMediaIcon
+                  <TwitterIconLink
                     url={jumbotronApp?.twitter}
-                    Icon={FaTwitter}
-                    color="#ffffff"
-                    iconClass="text-[24px] xl:text-[28px]"
+                    size={screenWidth < 1280 ? 24 : 30}
+                    color="white"
                   />
+                  // <SocialMediaIcon
+                  //   url={jumbotronApp?.twitter}
+                  //   Icon={FaTwitter}
+                  //   color="#ffffff"
+                  //   iconClass="text-[24px] xl:text-[28px]"
+                  // />
                 )}
               </div>
             </div>

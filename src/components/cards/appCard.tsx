@@ -4,8 +4,8 @@ import { useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
 import { ExternalLink } from "lucide-react";
 import Link from "next/link";
-import SocialMediaIcon from "../buttons/socialMediaIcon";
-import { FaTelegram, FaTwitter } from "react-icons/fa";
+import TwitterIconLink from "../buttons/twitterIcon";
+import { FaTelegram, FaTwitter, FaPlay } from "react-icons/fa";
 
 interface IAppCardProps {
   appIndex: number;
@@ -196,15 +196,16 @@ const AppCard = ({
             >
               <div className="w-full h-10 flex items-center gap-3">
                 <div className="w-10 aspect-square rounded-[50%] bg-white flex items-center justify-center hover:opacity-80 active:opacity-60 aria-pressed:opacity-60 duration-300 ease-in-out">
-                  <ExternalLink className="text-black" />
+                  <FaPlay className="text-black text-[18px] ml-1" />
                 </div>
                 {app.twitter && app.twitter !== "" && (
-                  <SocialMediaIcon
-                    url={app.twitter}
-                    Icon={FaTwitter}
-                    color="#ffffff"
-                    iconClass="text-[28px]"
-                  />
+                  // <SocialMediaIcon
+                  //   url={app.twitter}
+                  //   Icon={FaTwitter}
+                  //   color="#ffffff"
+                  //   iconClass="text-[28px]"
+                  // />
+                  <TwitterIconLink url={app.twitter} size={28} color="white" />
                 )}
               </div>
 
