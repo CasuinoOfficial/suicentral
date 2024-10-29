@@ -13,7 +13,7 @@ import { cn } from "@/lib/utils";
 import { Dialog } from "@/components/ui/dialog";
 import { ALL_APP_LIST } from "@/constants";
 import MobileModal from "./modals/mobileModal";
-import { checkIsMobileDevice } from "@/lib/utils";
+// import { checkIsMobileDevice } from "@/lib/utils";
 
 interface IAppCarouselProps extends React.HTMLAttributes<HTMLDivElement> {
   appCarouselIndex: number;
@@ -33,7 +33,7 @@ const AppCarousel = ({
   setAppCarouselStatus,
   screenWidth,
 }: IAppCarouselProps) => {
-  const isMobileDevice = checkIsMobileDevice();
+  // const isMobileDevice = checkIsMobileDevice();
   const [isClient, setIsClient] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedApp, setSelectedApp] = useState<string>("");
@@ -69,13 +69,13 @@ const AppCarousel = ({
     }
   }, [selectedApp]);
 
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
+  // useEffect(() => {
+  //   setIsClient(true);
+  // }, []);
 
-  if (!isClient) {
-    return null;
-  }
+  // if (!isClient) {
+  //   return null;
+  // }
 
   return (
     <Dialog open={modalOpen} onOpenChange={setModalOpen}>
@@ -112,7 +112,7 @@ const AppCarousel = ({
                     appCarouselStatus={appCarouselStatus}
                     setAppCarouselStatus={setAppCarouselStatus}
                     batch={batch}
-                    isMobile={screenWidth < 1280 && isMobileDevice}
+                    isMobile={screenWidth < 1280}
                     setSelectedApp={setSelectedApp}
                   />
                 ))}
