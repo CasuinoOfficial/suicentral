@@ -7,22 +7,11 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import Link from "next/link";
 import AppCard from "./cards/appCard";
-import { use, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog";
+import { Dialog } from "@/components/ui/dialog";
 import { ALL_APP_LIST } from "@/constants";
-import { ExternalLink, X } from "lucide-react";
-import SocialMediaIcon from "@/components/buttons/socialMediaIcon";
-import { FaTelegram, FaTwitter } from "react-icons/fa";
 import MobileModal from "./modals/mobileModal";
 import { checkIsMobileDevice } from "@/lib/utils";
 
