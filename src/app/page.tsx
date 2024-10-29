@@ -109,7 +109,7 @@ export default function Home() {
         </div>
 
         {/* Apps */}
-        <div className="relative w-full flex flex-col py-[10%] 2xl:pt-[6%] overflow-hidden">
+        {/* <div className="relative w-full flex flex-col py-[10%] 2xl:pt-[6%] overflow-hidden">
           {appList.map((app, index) => (
             <AppCarousel
               key={`${app}-carousel-${index}`}
@@ -124,7 +124,7 @@ export default function Home() {
               screenWidth={screenWidth}
             />
           ))}
-        </div>
+        </div> */}
       </div>
     </div>
   );
