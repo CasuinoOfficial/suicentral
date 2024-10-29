@@ -127,11 +127,11 @@ const AppCarousel = ({
           )}
         </Carousel>
         {/* Mobile Modal */}
-        <MobileModal
+        {/* <MobileModal
           displayApp={displayApp}
           setSelectedApp={setSelectedApp}
           setModalOpen={setModalOpen}
-        />
+        /> */}
       </div>
     </Dialog>
   );
