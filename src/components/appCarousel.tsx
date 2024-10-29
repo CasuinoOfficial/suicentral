@@ -33,8 +33,8 @@ const AppCarousel = ({
   setAppCarouselStatus,
   screenWidth,
 }: IAppCarouselProps) => {
-  const isMobileDevice = checkIsMobileDevice();
-  const [isClient, setIsClient] = useState(false);
+  // const isMobileDevice = checkIsMobileDevice();
+  // const [isClient, setIsClient] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedApp, setSelectedApp] = useState<string>("");
   const displayApp =
@@ -69,13 +69,13 @@ const AppCarousel = ({
     }
   }, [selectedApp]);
 
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
+  // useEffect(() => {
+  //   setIsClient(true);
+  // }, []);
 
-  if (!isClient) {
-    return null;
-  }
+  // if (!isClient) {
+  //   return null;
+  // }
 
   return (
     <Dialog open={modalOpen} onOpenChange={setModalOpen}>
@@ -112,7 +112,7 @@ const AppCarousel = ({
                     appCarouselStatus={appCarouselStatus}
                     setAppCarouselStatus={setAppCarouselStatus}
                     batch={batch}
-                    isMobile={screenWidth < 1280 && isMobileDevice}
+                    isMobile={screenWidth < 1280}
                     setSelectedApp={setSelectedApp}
                   />
                 ))}
