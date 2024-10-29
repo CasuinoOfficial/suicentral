@@ -58,58 +58,9 @@ export default function Home() {
       {/* Content */}
       <div className="relative top-0 mt-17 w-full flex flex-col z-[2] bg-transparent">
         {/* Jumbotron Content */}
-        <div className="md:mt-[4%] lg:mt-[11%] 2xl:mt-[20%] px-[4%]">
-          <div className="relative w-[60%] md:w-[50%] lg:w-[33%] xl:w-[33%] flex flex-col gap-3">
-            <Image
-              className="relative w-[80%] md:w-fit z-[5]"
-              src="/gaming/doubleup-text-logo_380_120.png"
-              alt="app logo"
-              width={380}
-              height={120}
-            />
-            {/* Description */}
-            <div className="relative w-full flex flex-col gap-6 lg:pb-10 pr-2">
-              {/* Content */}
-              <span className="relative h-12 xl:h-20 text-xs xl:text-lg 2xl:text-[30px] !leading-[130%] font-medium drop-shadow-jumbotron-text z-[5]">
-                {jumbotronApp?.description}
-              </span>
-              {/* Buttons */}
-              <div className="relative flex items-center gap-3 lg:gap-4 z-[5]">
-                <Link
-                  href={jumbotronApp?.url}
-                  className="font-semibold h-8 xl:h-12 pl-3 pr-2.5 xl:pl-6 xl:pr-5 py-1 rounded-[4px] flex items-center gap-1 xl:gap-3 basic-component-statement-1"
-                >
-                  <span className="text-black text-xs xl:text-lg">
-                    Launch App
-                  </span>
-                  {/* <ExternalLink
-                    className="text-black"
-                    size={screenWidth < 1280 ? 16 : 24}
-                  /> */}
-                </Link>
-                {jumbotronApp?.twitter && jumbotronApp?.twitter !== "" && (
-                  <TwitterIconLink
-                    url={jumbotronApp?.twitter}
-                    size={screenWidth < 1280 ? 24 : 30}
-                    color="white"
-                  />
-                  // <SocialMediaIcon
-                  //   url={jumbotronApp?.twitter}
-                  //   Icon={FaTwitter}
-                  //   color="#ffffff"
-                  //   iconClass="text-[24px] xl:text-[28px]"
-                  // />
-                )}
-              </div>
-            </div>
-
-            {/* absolute */}
-            <div className="absolute w-full h-full top-0 bg-gradient-to-r from-black to-transparent blur-[60px]" />
-          </div>
-        </div>
 
         {/* Apps */}
-        {/* <div className="relative w-full flex flex-col py-[10%] 2xl:pt-[6%] overflow-hidden">
+        <div className="relative w-full flex flex-col py-[10%] 2xl:pt-[6%] overflow-hidden">
           {appList.map((app, index) => (
             <AppCarousel
               key={`${app}-carousel-${index}`}
@@ -124,7 +75,7 @@ export default function Home() {
               screenWidth={screenWidth}
             />
           ))}
-        </div> */}
+        </div>
       </div>
     </div>
   );
