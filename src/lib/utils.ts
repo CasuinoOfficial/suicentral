@@ -10,3 +10,7 @@ export const checkIsMobileDevice = () => {
     navigator.userAgent
   );
 };
+
+export const shortenAddress = (address: string) => {
+  return `${address.slice(0, 4)}...${address.slice(-5)}`;
+};
