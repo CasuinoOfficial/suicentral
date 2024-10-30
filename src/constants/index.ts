@@ -40,15 +40,16 @@ export const DEFI_APP_LIST: Record<string, APP_INFO> = {
     tags: ["CDP"],
     twitter: "",
   },
-  molefi: {
-    jumbotron_image: "/defi/molefi-app.png",
+  suilend: {
+    jumbotron_image: "/defi/suilend-app.jpeg",
     logo: "",
-    url: "https://mole.fi/",
-    title: "Molefi",
-    description: `Mole is a DeFi protocol provided leveraged yield farming, hedge fund and savings.`,
+    url: "https://suilend.fi/",
+    title: "Suilend",
+    description:
+      "Suilend is a lending protocol on Sui, built by the team behind Solend.",
     tagline:
-      "Mole is a DeFi protocol provided leveraged yield farming, hedge fund and savings.",
-    tags: ["Yield"],
+      "Suilend is a lending protocol on Sui, built by the team behind Solend.",
+    tags: ["Lending"],
     twitter: "",
   },
   typusfinance: {
@@ -61,6 +62,18 @@ export const DEFI_APP_LIST: Record<string, APP_INFO> = {
     tags: ["Yield"],
     twitter: "",
   },
+  molefi: {
+    jumbotron_image: "/defi/molefi-app.png",
+    logo: "",
+    url: "https://mole.fi/",
+    title: "Molefi",
+    description: `Mole is a DeFi protocol provided leveraged yield farming, hedge fund and savings.`,
+    tagline:
+      "Mole is a DeFi protocol provided leveraged yield farming, hedge fund and savings.",
+    tags: ["Yield"],
+    twitter: "",
+  },
+
   cetus: {
     jumbotron_image: "/defi/cetus-app.webp",
     logo: "",
@@ -103,18 +116,7 @@ export const DEFI_APP_LIST: Record<string, APP_INFO> = {
     tags: ["Perpetuals", "Aggretator"],
     twitter: "",
   },
-  suilend: {
-    jumbotron_image: "/defi/suilend-app.png",
-    logo: "",
-    url: "https://suilend.fi/",
-    title: "Suilend",
-    description:
-      "Suilend is a lending protocol on Sui, built by the team behind Solend.",
-    tagline:
-      "Suilend is a lending protocol on Sui, built by the team behind Solend.",
-    tags: ["Lending"],
-    twitter: "",
-  },
+
   scallop: {
     jumbotron_image: "/defi/scallop-app.jpg",
     logo: "",
@@ -205,27 +207,28 @@ export const GAMING_APP_LIST: Record<string, APP_INFO> = {
 
 export const ETC_APP_LIST: Record<string, APP_INFO> = {
   fourpillars: {
-    jumbotron_image: "",
-    logo: "/gaming/doubleup-text-logo_380_120.png",
+    jumbotron_image: "/etc/four-pillars-jumbotron.jpeg",
+    logo: "/etc/four-pillars-logo.png",
     url: "http://4pillars.io/",
     title: "Four Pillars",
     description: `Blockchain Research Firm`,
-    tagline: "",
+    tagline: "Abstract Away, Build the Real Blocks",
     tags: [""],
-    twitter: "",
+    twitter: "https://x.com/fourpillarsfp",
   },
 };
 
 export const SOCIAL_APP_LIST: Record<string, APP_INFO> = {
   rootlets: {
-    jumbotron_image: "",
-    logo: "",
-    url: "",
+    jumbotron_image: "/social/rootlets-jumbotron.jpeg",
+    logo: "/social/rootlets-logo.jpg",
+    url: "https://rootlets.io/",
     title: "Rootlets",
-    description: ``,
-    tagline: "",
+    description: `Cute creatures have come from the Suiverse to colonize Earth! Get ready, let’s r🐽t!`,
+    tagline:
+      "Cute creatures have come from the Suiverse to colonize Earth! Get ready, let’s r🐽t!",
     tags: [""],
-    twitter: "",
+    twitter: "https://x.com/rootlets_nft",
   },
   mirai: {
     jumbotron_image: "",
@@ -238,24 +241,24 @@ export const SOCIAL_APP_LIST: Record<string, APP_INFO> = {
     twitter: "",
   },
   citizens: {
-    jumbotron_image: "",
-    logo: "",
+    jumbotron_image: "/gaming/doubleup-jumbotron.png",
+    logo: "/gaming/doubleup-text-logo_380_120.png",
     url: "https://www.doubleup.fun/citizens",
     title: "Citizens",
     description: ``,
     tagline: "",
     tags: [""],
-    twitter: "",
+    twitter: "https://x.com/doubleup_app",
   },
   rinoco: {
-    jumbotron_image: "",
-    logo: "",
-    url: "",
+    jumbotron_image: "/social/rinoco-jumbotron.jpeg",
+    logo: "/social/rinoco-logo.jpg",
+    url: "https://www.rinoco.world/",
     title: "Rinoco",
-    description: ``,
-    tagline: "",
+    description: `Where the cutest creatures are all gathered! 🐾`,
+    tagline: "Where the cutest creatures are all gathered! 🐾",
     tags: [""],
-    twitter: "",
+    twitter: "https://x.com/RinocoOfficial",
   },
 };
 
