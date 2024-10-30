@@ -14,7 +14,7 @@ const ConnectButton = () => {
     return (
       <button
         className={cn(
-          "rounded h-8 py-1 px-2 md:px-4 bg-[#4DA2FF] text-white flex items-center text-sm font-medium gap-2"
+          "rounded h-8 2xl:h-10 py-1 px-2 md:px-4 2xl:py-2 bg-[#4DA2FF] text-white flex items-center text-sm font-medium gap-2"
         )}
         onClick={() => {
           disconnect.mutate();
@@ -33,7 +33,7 @@ const ConnectButton = () => {
       trigger={
         <button
           className={cn(
-            "rounded h-8 py-1 px-2 md:px-4 bg-[#4DA2FF] text-white flex items-center text-sm font-medium gap-2"
+            "rounded h-8 2xl:h-10 py-1 px-2 md:px-4 2xl:py-2 bg-[#4DA2FF] text-white flex items-center text-sm font-medium gap-2"
           )}
         >
           <Wallet size={16} />

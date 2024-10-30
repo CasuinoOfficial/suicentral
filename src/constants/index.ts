@@ -281,15 +281,15 @@ export const MEMECOINS_APP_LIST: Record<string, APP_INFO> = {
     tags: [""],
     twitter: "https://x.com/Beliquoronsui",
   },
-  seb: {
-    jumbotron_image: "",
-    logo: "",
-    url: "",
-    title: "SEB",
+  scb: {
+    jumbotron_image: "/memecoins/scb-jumbotron.jpeg",
+    logo: "/memecoins/scb-logo.jpg",
+    url: "https://sacabam.fun/",
+    title: "SCB",
     description: ``,
     tagline: "",
     tags: [""],
-    twitter: "",
+    twitter: "https://x.com/sacabamfun/",
   },
   blub: {
     jumbotron_image: "/memecoins/blub-jumbotron.jpeg",
