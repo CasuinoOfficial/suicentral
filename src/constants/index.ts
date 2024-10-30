@@ -151,7 +151,7 @@ export const DEFI_APP_LIST: Record<string, APP_INFO> = {
 
 export const GAMING_APP_LIST: Record<string, APP_INFO> = {
   doubleup: {
-    jumbotron_image: "/gaming/doubleup-jumbotron.png",
+    jumbotron_image: "/gaming/Diamond_Only.png",
     logo: "/gaming/doubleup-text-logo_380_120.png",
     url: "https://www.doubleup.fun/game/coinflip",
     title: "DoubleUp",
@@ -229,14 +229,14 @@ export const SOCIAL_APP_LIST: Record<string, APP_INFO> = {
     twitter: "https://x.com/rootlets_nft",
   },
   mirai: {
-    jumbotron_image: "",
-    logo: "",
-    url: "",
+    jumbotron_image: "/social/mirai-jumbotron.jpeg",
+    logo: "/social/mirai-logo.jpg",
+    url: "https://nozomi.world",
     title: "Mirai",
     description: ``,
     tagline: "",
     tags: [""],
-    twitter: "",
+    twitter: "https://x.com/_studiomirai",
   },
   citizens: {
     jumbotron_image: "/gaming/doubleup-jumbotron.png",
