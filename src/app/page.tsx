@@ -52,7 +52,7 @@ export default function Home() {
           backgroundImage: `url(${GAMING_APP_LIST.doubleup.jumbotron_image})`,
         }}
       >
-        <div className="w-full bg-gradient-to-b from-transparent from-[20%] to-black to-[65%] h-[50%]" />
+        <div className="w-full bg-gradient-to-b from-transparent from-[20%] to-[#141414] to-[65%] h-[50%]" />
       </div>
 
       {/* Content */}

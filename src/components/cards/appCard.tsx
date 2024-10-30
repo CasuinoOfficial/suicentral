@@ -166,27 +166,48 @@ const AppCard = ({
             {/* Image */}
             <div
               className={cn(
-                "aspect-[16/9] flex flex-col justify-between items-center overflow-hidden p-1 bg-contain bg-center bg-fixed bg-no-repeat bg-black",
+                "relative aspect-[16/9] overflow-hidden p-1 bg-black",
                 isOpened ? "rounded-t-[4px]" : "rounded-[4px]"
               )}
-              style={{
-                backgroundImage: `url(${
-                  app.jumbotron_image !== ""
-                    ? app.jumbotron_image
-                    : "/defi/sui-app.png"
-                })`,
-              }}
             >
-              {/* Upper region */}
-              <div className="w-full flex items-center justify-between h-[14%]">
-                {/* <span>test</span>
-          <span>test</span> */}
+              {/* Image */}
+              <div
+                className={cn(
+                  "relative w-full h-full flex flex-col justify-between items-center overflow-hidden p-1 bg-contain bg-center bg-fixed bg-no-repeat bg-transparent z-[5]"
+                )}
+                style={{
+                  backgroundImage: `url(${
+                    app.jumbotron_image !== ""
+                      ? app.jumbotron_image
+                      : "/defi/sui-app.png"
+                  })`,
+                }}
+              >
+                {/* Upper region */}
+                <div className="w-full flex items-center justify-between h-[14%]">
+                  {/* <span>test</span>
+                  <span>test</span> */}
+                </div>
+                {/* Lower region */}
+                <div className="w-full flex items-center justify-center h-[10%]">
+                  {/* <span>test</span> */}
+                </div>
               </div>
-              {/* Lower region */}
-              <div className="w-full flex items-center justify-center h-[10%]">
-                {/* <span>test</span> */}
-              </div>
+              {/* Expands image */}
+              <div
+                className="absolute top-0 left-0 w-full h-full bg-transparent scale-[3] blur-xl"
+                style={{
+                  backgroundImage: `url(${
+                    app.jumbotron_image !== ""
+                      ? app.jumbotron_image
+                      : "/defi/sui-app.png"
+                  })`,
+                  filter: "blur(24px)",
+                  WebkitFilter: "blur(24px)",
+                }}
+              />
             </div>
+
             {/* Content */}
             <div
               className={cn(
