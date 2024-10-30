@@ -7,7 +7,7 @@ export const DEFI_APP_LIST: Record<string, APP_INFO> = {
     description: "The ease of a centralized exchange with none of the risk.",
     tagline: "Cex On-Chain",
     tags: ["Aggretator", "DEX", "Liquid Staking"],
-    twitter: "",
+    twitter: "https://x.com/AftermathFi",
   },
   navi: {
     jumbotron_image: "/defi/navi-app.png",
@@ -17,7 +17,7 @@ export const DEFI_APP_LIST: Record<string, APP_INFO> = {
     description: `NAVI offers over collateralized lending/borrowing for SUI, USDC, USDT, wETH and wBTC and supports features like isolated pool, flash loan and soon to come crosschain lending/borrowing.`,
     tagline: "Lending platform on Sui",
     tags: ["Lending"],
-    twitter: "",
+    twitter: "https://x.com/navi_protocol",
   },
   flowx: {
     jumbotron_image: "/defi/flowx-app.png",
@@ -28,7 +28,7 @@ export const DEFI_APP_LIST: Record<string, APP_INFO> = {
     tagline:
       "FlowX Finance is the ecosystem-focused decentralized exchange built on the Sui Blockchain",
     tags: ["DEX"],
-    twitter: "",
+    twitter: "https://x.com/FlowX_finance",
   },
   bucket: {
     jumbotron_image: "/defi/bucket-app.png",
@@ -38,7 +38,7 @@ export const DEFI_APP_LIST: Record<string, APP_INFO> = {
     description: "some coin thingy",
     tagline: "Bucket Protocol",
     tags: ["CDP"],
-    twitter: "",
+    twitter: "https://x.com/bucket_protocol",
   },
   suilend: {
     jumbotron_image: "/defi/suilend-app.jpeg",
@@ -50,7 +50,7 @@ export const DEFI_APP_LIST: Record<string, APP_INFO> = {
     tagline:
       "Suilend is a lending protocol on Sui, built by the team behind Solend.",
     tags: ["Lending"],
-    twitter: "",
+    twitter: "https://x.com/suilendprotocol",
   },
   typusfinance: {
     jumbotron_image: "/defi/typus-app.png",
@@ -60,7 +60,7 @@ export const DEFI_APP_LIST: Record<string, APP_INFO> = {
     description: `Real yield infrastructure on Sui`,
     tagline: "Real yield infrastructure on Sui",
     tags: ["Yield"],
-    twitter: "",
+    twitter: "https://x.com/TypusFinance",
   },
   molefi: {
     jumbotron_image: "/defi/molefi-app.png",
@@ -71,9 +71,8 @@ export const DEFI_APP_LIST: Record<string, APP_INFO> = {
     tagline:
       "Mole is a DeFi protocol provided leveraged yield farming, hedge fund and savings.",
     tags: ["Yield"],
-    twitter: "",
+    twitter: "https://x.com/moledefi",
   },
-
   cetus: {
     jumbotron_image: "/defi/cetus-app.webp",
     logo: "",
@@ -83,7 +82,7 @@ export const DEFI_APP_LIST: Record<string, APP_INFO> = {
       "Cetus is a pioneer DEX and concentrated liquidity protocol focusing on Move-based ecosystems like Aptos and Sui. It works as a crucial part of the ecosystem infrastructure to satisfy the comprehensive needs of traders, LPs, upper applications and an increasing DeFi population.",
     tagline: "",
     tags: ["DEX"],
-    twitter: "",
+    twitter: "https://x.com/CetusProtocol",
   },
   turbos: {
     jumbotron_image: "/defi/turbos-app.png",
@@ -94,7 +93,7 @@ export const DEFI_APP_LIST: Record<string, APP_INFO> = {
       "A hyper-efficient decentralized crypto marketplace built on Sui",
     tagline: "A hyper-efficient decentralized crypto marketplace built on Sui",
     tags: ["DEX"],
-    twitter: "",
+    twitter: "https://x.com/Turbos_finance",
   },
   kriya: {
     jumbotron_image: "/defi/kryia-app.png",
@@ -104,7 +103,7 @@ export const DEFI_APP_LIST: Record<string, APP_INFO> = {
     description: `1-stop DeFi protocol on Sui. Offering Swaps, Limit Orders, 1-click leverage lending strategies, Yield Optimiser Vaults and 20x perps`,
     tagline: "",
     tags: ["Yield", "Swaps", "Leverage", "Perpetuals"],
-    twitter: "",
+    twitter: "https://x.com/KriyaDEX",
   },
   sudofinance: {
     jumbotron_image: "/defi/sudo-app.png",
@@ -114,9 +113,8 @@ export const DEFI_APP_LIST: Record<string, APP_INFO> = {
     description: `Sudo is the first protocol that provides you access to a wide range of perpetual assets within the Sui ecosystem. As the first perpetuals aggregator platform, Sudo aims to provide the best perpetuals trading experience to tadres on Sui. `,
     tagline: "",
     tags: ["Perpetuals", "Aggretator"],
-    twitter: "",
+    twitter: "https://x.com/sudofinance",
   },
-
   scallop: {
     jumbotron_image: "/defi/scallop-app.jpg",
     logo: "",
@@ -126,7 +124,7 @@ export const DEFI_APP_LIST: Record<string, APP_INFO> = {
       "Scallop is the pioneering Next Generation Money Market for the Sui ecosystem which emphasizes institutional-grade quality, enhanced composability, and robust security.",
     tagline: "",
     tags: ["Lending"],
-    twitter: "",
+    twitter: "https://x.com/Scallop_io",
   },
   alphafi: {
     jumbotron_image: "/defi/alphafi-app.png",
@@ -137,7 +135,7 @@ export const DEFI_APP_LIST: Record<string, APP_INFO> = {
     tagline:
       "Premier Yield Optimizer on the SUI Blockchain. Earn Safe, Real Yields with AlphaFi.",
     tags: ["Yield Aggregator"],
-    twitter: "",
+    twitter: "https://x.com/AlphaFiSUI",
   },
   bluefin: {
     jumbotron_image: "/defi/bluefin-app.png",
@@ -147,7 +145,7 @@ export const DEFI_APP_LIST: Record<string, APP_INFO> = {
     description: `Bluefin is a decentralized orderbook-based exchange built for both professional and first-time traders. It focuses on security, transparency and redefining the user experience of using on-chain trading platforms - and is backed by Polychain, SIG, Brevan Howard, and other leading firms`,
     tagline: "A Financial Network With Parallelized Performance",
     tags: ["Trading"],
-    twitter: "",
+    twitter: "https://x.com/bluefinapp",
   },
 };
 
@@ -170,7 +168,7 @@ export const GAMING_APP_LIST: Record<string, APP_INFO> = {
     description: "An exciting top down shooter featuring cute dogs.",
     tagline: "pew pew pew",
     tags: ["Gaming"],
-    twitter: "",
+    twitter: "https://x.com/panzerdogs",
   },
   cosmocadia: {
     jumbotron_image: "/gaming/cosmocadia-app.png",
@@ -181,7 +179,7 @@ export const GAMING_APP_LIST: Record<string, APP_INFO> = {
       "Embark on an epic journey armed with your trusty axe, as you shape and cultivate an entire world. Delve into exploration, harvest resources, construct, cultivate, and master the art of crafting to forge your utopia. Prove your mayoral prowess in this captivating and addictive casual simulator.",
     tagline: "",
     tags: ["Gaming"],
-    twitter: "",
+    twitter: "https://x.com/Cosmocadia",
   },
   cryptocatchfishingstar: {
     jumbotron_image: "/gaming/fishing-app.png",
@@ -191,7 +189,7 @@ export const GAMING_APP_LIST: Record<string, APP_INFO> = {
     description: "Hypercasual fishing game on Sui",
     tagline: "fish fish fish",
     tags: ["Gaming"],
-    twitter: "",
+    twitter: "https://x.com/CC_FishingStar",
   },
   "winx.io": {
     jumbotron_image: "/gaming/winx-app.png",
@@ -201,7 +199,7 @@ export const GAMING_APP_LIST: Record<string, APP_INFO> = {
     description: `A crypto casino from the future `,
     tagline: "A crypto casino from the future ",
     tags: ["Casino"],
-    twitter: "",
+    twitter: "https://x.com/WinX_io",
   },
 };
 
