@@ -1,0 +1,4 @@
+export const EVENTS = {
+    WALLET_CONNECTED: "WALLET_CONNECTED",
+}
+

@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@amplitude/analytics-browser": "^2.11.8",
     "@mysten/dapp-kit": "^0.14.27",
     "@mysten/enoki": "^0.4.6",
     "@mysten/kiosk": "^0.9.22",

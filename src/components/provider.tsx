@@ -10,6 +10,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactNode, useMemo } from "react";
 import { createInMemoryStorage, createLocalStorage } from "@mysten/enoki";
 import { provider } from "@/client/suiClient";
+import AmplitudeContextProvider from "@/context/AmplitudeContext";
 
 type Network = "mainnet" | "testnet" | undefined;
 
@@ -50,7 +51,9 @@ const Provider = ({ children }: { children: ReactNode }) => {
             name: "Sui Central",
           }}
         >
-          {children}
+          <AmplitudeContextProvider>
+            {children}
+          </AmplitudeContextProvider>
         </WalletProvider>
       </SuiClientProvider>
     </QueryClientProvider>

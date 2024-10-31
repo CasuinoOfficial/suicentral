@@ -1,14 +1,23 @@
 "use client";
 
-import { cn, shortenAddress } from "@/lib/utils";
+import { cn, MetricsTracker, shortenAddress } from "@/lib/utils";
 import "@mysten/dapp-kit/dist/index.css";
-import { ConnectModal } from "@mysten/dapp-kit";
+import { ConnectModal, useCurrentWallet } from "@mysten/dapp-kit";
 import { Wallet } from "lucide-react";
 import { useCurrentAccount, useDisconnectWallet } from "@mysten/dapp-kit";
+import { EVENTS } from "@/constants/metricsConstants";
+import { useEffect } from "react";
 
 const ConnectButton = () => {
   const currentAccount = useCurrentAccount();
   const disconnect = useDisconnectWallet();
+  const wallet = useCurrentWallet().currentWallet;
+
+  useEffect(() => {
+    if (currentAccount) {
+      MetricsTracker.track(EVENTS.WALLET_CONNECTED, { address: currentAccount?.address, wallet_type: wallet?.name });
+    }
+  }, [currentAccount, wallet]);
 
   if (currentAccount) {
     return (
