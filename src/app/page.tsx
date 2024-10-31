@@ -12,10 +12,11 @@ import Header from "@/components/header";
 import { ExternalLink } from "lucide-react";
 import AppCarousel from "@/components/appCarousel";
 import { useState } from "react";
-import { cn } from "@/lib/utils";
+import { cn, MetricsTracker } from "@/lib/utils";
 import useMediaSize from "@/hooks/useMediaSize";
 import { FaTelegram } from "react-icons/fa";
 import TwitterIconLink from "@/components/buttons/twitterIcon";
+import { EVENTS } from "@/constants/metricsConstants";
 
 export default function Home() {
   const screenWidth = useMediaSize();
@@ -77,7 +78,10 @@ export default function Home() {
               <div className="relative flex items-center gap-3 lg:gap-4 z-[5]">
                 <Link
                   href={jumbotronApp?.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="font-semibold h-8 xl:h-12 pl-3 pr-2.5 xl:pl-6 xl:pr-5 py-1 rounded-[4px] flex items-center gap-1 xl:gap-3 basic-component-statement-1"
+                  onClick={() => MetricsTracker.track(EVENTS.LINK_CLICKED, { link: jumbotronApp.url })}
                 >
                   <span className="text-black text-xs xl:text-lg">
                     Launch App

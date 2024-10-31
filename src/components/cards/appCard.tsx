@@ -1,11 +1,12 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { cn } from "@/lib/utils";
+import { cn, MetricsTracker } from "@/lib/utils";
 import { ExternalLink } from "lucide-react";
 import Link from "next/link";
 import TwitterIconLink from "../buttons/twitterIcon";
 import { FaTelegram, FaTwitter, FaPlay } from "react-icons/fa";
+import { EVENTS } from "@/constants/metricsConstants";
 
 interface IAppCardProps {
   appIndex: number;
@@ -150,6 +151,8 @@ const AppCard = ({
         ) : (
           <Link
             href={app.url}
+            target="_blank"
+            rel="noopener noreferrer"
             className={cn(
               "absolute pl-1 xl:pl-2 cursor-pointer duration-300 ease-in-out",
               isOpened
@@ -162,6 +165,7 @@ const AppCard = ({
             )}
             onMouseEnter={handleHover}
             onMouseLeave={handleLeave}
+            onClick={() => MetricsTracker.track(EVENTS.LINK_CLICKED, { link: app.url })}
           >
             {/* Image */}
             <div

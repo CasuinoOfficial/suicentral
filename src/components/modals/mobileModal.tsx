@@ -8,6 +8,8 @@ import {
 } from "@/components/ui/dialog";
 import TwitterIconLink from "../buttons/twitterIcon";
 import { X } from "lucide-react";
+import { MetricsTracker } from "@/lib/utils";
+import { EVENTS } from "@/constants/metricsConstants";
 
 interface IMobileModalProps {
   displayApp: APP_INFO;
@@ -36,7 +38,10 @@ const MobileModal = ({
         <div className="relative w-full flex items-center gap-3 z-[6] mt-10">
           <Link
             href={displayApp?.url ?? ""}
+            target="_blank"
+            rel="noopener noreferrer"
             className="relative w-fit font-semibold h-7 md:h-8 pl-3 pr-2.5 py-1 rounded-[4px] flex items-center gap-1 basic-component-statement-1"
+            onClick={() => MetricsTracker.track(EVENTS.LINK_CLICKED, { link: displayApp.url })}
           >
             <span className="text-black text-[10px] md:text-xs">
               Launch App
