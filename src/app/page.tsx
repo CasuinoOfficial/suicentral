@@ -6,7 +6,8 @@ import {
   GAMING_APP_LIST,
   SOCIAL_APP_LIST,
   MEMECOINS_APP_LIST,
-  ETC_APP_LIST,
+  RESEARCH_APP_LIST,
+  INFRASTRUCTURE_APP_LIST,
 } from "@/constants";
 import Header from "@/components/header";
 import { ExternalLink } from "lucide-react";
@@ -24,13 +25,15 @@ export default function Home() {
   const gamingList = Object.values(GAMING_APP_LIST);
   const memecoinsList = Object.values(MEMECOINS_APP_LIST);
   const socialList = Object.values(SOCIAL_APP_LIST);
-  const etcList = Object.values(ETC_APP_LIST);
+  const researchList = Object.values(RESEARCH_APP_LIST);
+  const infrastructure = Object.values(INFRASTRUCTURE_APP_LIST);
   const appList = [
     { label: "Gaming Apps", list: gamingList },
     { label: "DeFi Apps", list: defiList },
     { label: "Memecoins", list: memecoinsList },
     { label: "Socials", list: socialList },
-    { label: "ETCs", list: etcList },
+    { label: "Researchs", list: researchList },
+    { label: "Infrastructure", list: infrastructure },
   ];
   const defaultAppCarouselStatus = appList.map(() => false);
   const [appCarouselStatus, setAppCarouselStatus] = useState(

@@ -203,16 +203,39 @@ export const GAMING_APP_LIST: Record<string, APP_INFO> = {
   },
 };
 
-export const ETC_APP_LIST: Record<string, APP_INFO> = {
+export const RESEARCH_APP_LIST: Record<string, APP_INFO> = {
   fourpillars: {
-    jumbotron_image: "/etc/four-pillars-jumbotron.jpeg",
-    logo: "/etc/four-pillars-logo.png",
+    jumbotron_image: "/research/four-pillars-jumbotron.jpeg",
+    logo: "/research/four-pillars-logo.png",
     url: "http://4pillars.io/",
     title: "Four Pillars",
     description: `Blockchain Research Firm`,
     tagline: "Abstract Away, Build the Real Blocks",
     tags: [""],
     twitter: "https://x.com/fourpillarsfp",
+  },
+  suivision: {
+    jumbotron_image: "/research/suivision-jumbotron.png",
+    logo: "/infrastructure/blockvision-logo.jpg",
+    url: "https://suivision.xyz/",
+    title: "Suivision",
+    description: `Explore Sui Blockchain`,
+    tagline: "Explore Sui Blockchain",
+    tags: [""],
+    twitter: "https://x.com/blockvisionhq",
+  },
+};
+
+export const INFRASTRUCTURE_APP_LIST: Record<string, APP_INFO> = {
+  blockvision: {
+    jumbotron_image: "/infrastructure/blockvision-jumbotron.jpeg",
+    logo: "/infrastructure/blockvision-logo.jpg",
+    url: "https://blockvision.org/",
+    title: "Blockvision",
+    description: `Web 3.0 Data and Node Infrastructure`,
+    tagline: "Web 3.0 Data and Node Infrastructure",
+    tags: [""],
+    twitter: "https://x.com/blockvisionhq",
   },
 };
 
@@ -327,7 +350,8 @@ export const MEMECOINS_APP_LIST: Record<string, APP_INFO> = {
 export const ALL_APP_LIST: Record<string, APP_INFO> = {
   ...DEFI_APP_LIST,
   ...GAMING_APP_LIST,
-  ...ETC_APP_LIST,
+  ...RESEARCH_APP_LIST,
+  ...INFRASTRUCTURE_APP_LIST,
   ...SOCIAL_APP_LIST,
   ...MEMECOINS_APP_LIST,
   eample: {
