@@ -252,7 +252,7 @@ export const SOCIAL_APP_LIST: Record<string, APP_INFO> = {
     twitter: "https://x.com/rootlets_nft",
   },
   mirai: {
-    jumbotron_image: "/social/mirai-jumbotron.jpeg",
+    jumbotron_image: "/social/mirai-logo.jpg",
     logo: "/social/mirai-logo.jpg",
     url: "https://nozomi.world",
     title: "Mirai",
