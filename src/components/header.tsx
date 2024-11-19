@@ -3,9 +3,13 @@
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 import ConnectButton from "./buttons/connectButton";
+import { Button } from "./ui/button";
+import SwapModal from "./modals/swapModal";
+import { Dialog } from "@/components/ui/dialog";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isSwapModalOpen, setIsSwapModalOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,8 +32,20 @@ const Header = () => {
       <span className="text-white text-3xl xl:text-4xl font-bold relative">
         SuiCentral
       </span>
-
-      <ConnectButton />
+      <div className="flex flex-row">
+        <Button onClick={() => {
+          console.log("clicked")
+          setIsSwapModalOpen((prev) => !prev);
+        }
+        }>Swap Cross-Chain</Button>
+        <ConnectButton />
+      </div>
+      <Dialog
+        open={isSwapModalOpen}
+        onOpenChange={setIsSwapModalOpen}
+      >
+        <SwapModal setModalOpen={setIsSwapModalOpen}/>
+      </Dialog>
     </header>
   );
 };

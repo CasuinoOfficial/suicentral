@@ -378,3 +378,8 @@ export const EXAMPLE_APP_LIST: Record<string, APP_INFO> = {
     twitter: "",
   },
 };
+
+export const SIMPLE_SWAP_CONSTANTS: Record<string, string> = {
+  baseURL: "https://api.simpleswap.io",
+  apiKey: "de64d550-0b68-4887-b5ef-677e9c000850"
+}
