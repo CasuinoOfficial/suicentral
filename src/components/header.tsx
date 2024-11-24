@@ -6,10 +6,10 @@ import ConnectButton from "./buttons/connectButton";
 import { Button } from "./ui/button";
 import SwapModal from "./modals/swapModal";
 import { Dialog } from "@/components/ui/dialog";
+import { Connect3rdPartyButton } from "@/components/buttons/connect3rdPartybutton";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isSwapModalOpen, setIsSwapModalOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -32,20 +32,20 @@ const Header = () => {
       <span className="text-white text-3xl xl:text-4xl font-bold relative">
         SuiCentral
       </span>
-      <div className="flex flex-row">
-        <Button onClick={() => {
-          console.log("clicked")
-          setIsSwapModalOpen((prev) => !prev);
-        }
-        }>Swap Cross-Chain</Button>
+      <div className="flex flex-row gap-4">
+        <Connect3rdPartyButton />
         <ConnectButton />
+      <SwapModal
+        trigger={
+          <button
+          className={cn(
+            "rounded h-8 2xl:h-10 py-1 px-2 md:px-4 2xl:py-2 bg-[#4DA2FF] text-white flex items-center text-sm font-medium gap-2",
+          )}
+          >Buy Crypto</button>
+        }
+      />
       </div>
-      <Dialog
-        open={isSwapModalOpen}
-        onOpenChange={setIsSwapModalOpen}
-      >
-        <SwapModal setModalOpen={setIsSwapModalOpen}/>
-      </Dialog>
+
     </header>
   );
 };

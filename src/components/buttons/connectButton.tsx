@@ -46,7 +46,7 @@ const ConnectButton = () => {
           )}
         >
           <Wallet size={16} />
-          <h1 className="hidden md:inline-block">Connect Wallet</h1>
+          <h1 className="hidden md:inline-block">Connect Sui Wallet</h1>
         </button>
       }
     />

@@ -9,8 +9,11 @@ import { getFullnodeUrl } from "@mysten/sui/client";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactNode, useMemo } from "react";
 import { createInMemoryStorage, createLocalStorage } from "@mysten/enoki";
-import { provider } from "@/client/suiClient";
+import { MetaMaskProvider } from "@metamask/sdk-react";
 import AmplitudeContextProvider from "@/context/AmplitudeContext";
+import { Web3ReactProvider, Web3ReactHooks } from "@web3-react/core";
+import { Connector } from "@web3-react/types";
+import allConnections from "@/lib/connectors";
 
 type Network = "mainnet" | "testnet" | undefined;
 
@@ -22,6 +25,10 @@ const { networkConfig } = createNetworkConfig({
 });
 
 const queryClient = new QueryClient();
+
+const connections: [Connector, Web3ReactHooks][] = allConnections.map(
+  ([connector, hooks]) => [connector, hooks],
+);
 
 const Provider = ({ children }: { children: ReactNode }) => {
   let defaultNetName: Network;
@@ -36,7 +43,7 @@ const Provider = ({ children }: { children: ReactNode }) => {
       typeof window === "undefined"
         ? createInMemoryStorage()
         : createLocalStorage(),
-    []
+    [],
   );
 
   return (
@@ -52,7 +59,18 @@ const Provider = ({ children }: { children: ReactNode }) => {
           }}
         >
           <AmplitudeContextProvider>
-            {children}
+            <MetaMaskProvider
+              sdkOptions={{
+                dappMetadata: {
+                  name: "Example React Dapp",
+                  url: "https:suicentral.xyz",
+                },
+              }}
+            >
+              <Web3ReactProvider connectors={connections}>
+                {children}
+              </Web3ReactProvider>
+            </MetaMaskProvider>
           </AmplitudeContextProvider>
         </WalletProvider>
       </SuiClientProvider>
