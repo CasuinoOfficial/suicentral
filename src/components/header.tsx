@@ -3,9 +3,13 @@
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 import ConnectButton from "./buttons/connectButton";
+import { Button } from "./ui/button";
+import UnlimintModal from "./modals/unlimintModal";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isOffRamp, setIsOffRamp] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,8 +32,25 @@ const Header = () => {
       <span className="text-white text-3xl xl:text-4xl font-bold relative">
         SuiCentral
       </span>
-
-      <ConnectButton />
+      <div className="flex flex-row gap-4">
+        <Button 
+          onClick={() => {setIsOffRamp(false); setIsModalOpen(prev => !prev);}}
+        >
+          Buy Crypto
+        </Button>
+        <Button 
+          onClick={() => {setIsOffRamp(true); setIsModalOpen(prev => !prev);}}
+        >
+          Sell Crypto
+        </Button>
+        
+        <ConnectButton />
+      </div>
+      <UnlimintModal
+        showBuyCrypto={isModalOpen}
+        handleShowBuyCrypto={() => {setIsModalOpen(prev => !prev)}}
+        isOffRamp={isOffRamp}
+      />
     </header>
   );
 };
