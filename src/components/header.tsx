@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 import ConnectButton from "./buttons/connectButton";
 import { Button } from "./ui/button";
+import Image from "next/image";
 import UnlimintModal from "./modals/unlimintModal";
 
 const Header = () => {
@@ -29,26 +30,43 @@ const Header = () => {
           : "bg-gradient-to-b from-[#141414] to-transparent"
       )}
     >
-      <span className="text-white text-3xl xl:text-4xl font-bold relative">
+      <Image
+        className="w-40 xl:w-60 relative"
+        src="/suicentral_logo.svg"
+        alt="SuiCentral Logo"
+        width={240}
+        height={34}
+      />
+      {/* <span className="text-white text-3xl xl:text-4xl font-bold relative">
         SuiCentral
-      </span>
-      <div className="flex flex-row gap-4">
-        <Button 
-          onClick={() => {setIsOffRamp(false); setIsModalOpen(prev => !prev);}}
+      </span> */}
+      <div className="flex flex-row gap-1 xl:gap-4">
+        <Button
+          className="!w-fit max-md:px-2"
+          onClick={() => {
+            setIsOffRamp(false);
+            setIsModalOpen((prev) => !prev);
+          }}
         >
           Buy Crypto
         </Button>
-        <Button 
-          onClick={() => {setIsOffRamp(true); setIsModalOpen(prev => !prev);}}
+        <Button
+          className="!w-fit max-md:px-2"
+          onClick={() => {
+            setIsOffRamp(true);
+            setIsModalOpen((prev) => !prev);
+          }}
         >
           Sell Crypto
         </Button>
-        
+
         <ConnectButton />
       </div>
       <UnlimintModal
         showBuyCrypto={isModalOpen}
-        handleShowBuyCrypto={() => {setIsModalOpen(prev => !prev)}}
+        handleShowBuyCrypto={() => {
+          setIsModalOpen((prev) => !prev);
+        }}
         isOffRamp={isOffRamp}
       />
     </header>
