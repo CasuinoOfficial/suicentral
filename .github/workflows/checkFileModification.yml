@@ -1,0 +1,75 @@
+name: Check File Modification
+on:
+  pull_request:
+    paths:
+      - '**/*'
+
+jobs:
+  check-modified-files:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Check for file modifications
+      run: |
+        # Define the files or directories that can be modified
+        FILES=(
+          "public/defi",
+          "public/gaming",
+          "public/infrastructure",
+          "public/memecoins",
+          "public/research",
+          "public/social",
+          "src/constants/index"
+        )
+
+        # Get the list of modified files
+        MODIFIED_FILES=$(git diff --name-only origin/main)
+
+        # Flag for unauthorized changes
+        UNAUTHORIZED_CHANGE=false
+
+        # Allowed image extensions
+        IMAGE_EXTENSIONS="jpg|jpeg|png|gif|svg|webp"
+
+        # Check if the actor is an admin
+        if [[ "$GITHUB_ACTOR" == "admin-username" ]]; then
+          echo "ℹ️ Skipping checks for admin: $GITHUB_ACTOR"
+          exit 0
+        fi
+
+        # Check each modified file
+        for modified_file in $MODIFIED_FILES; do
+          # Assume the file is not allowed
+          is_allowed=false
+        
+          # Check if the modified file is in the allowed list
+          for allowed_file in "${FILES[@]}"; do
+            if [[ "$modified_file" == "$allowed_file"* ]]; then
+              is_allowed=true
+
+              # If the file is in a public folder, ensure it is an image file
+              if [[ "$allowed_file" == public/* && ! "$modified_file" =~ \.($IMAGE_EXTENSIONS)$ ]]; then
+                echo "❌ Error: Non-image file detected in public folder: $modified_file"
+                UNAUTHORIZED_CHANGE=true
+              fi
+              
+              break
+            fi
+          done
+        
+          # If the file is not allowed, mark it as unauthorized
+          if [ "$is_allowed" = false ]; then
+            echo "❌ Error: Unauthorized change detected in file: $modified_file"
+            UNAUTHORIZED_CHANGE=true
+          fi
+        done
+
+        # If any unauthorized change is detected, fail the script
+        if [ "$UNAUTHORIZED_CHANGE" = true ]; then
+          exit 1
+        fi
+        
+        echo "✅ All changes are within the allowed files."
