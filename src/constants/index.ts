@@ -345,6 +345,16 @@ export const MEMECOINS_APP_LIST: Record<string, APP_INFO> = {
     tags: [""],
     twitter: "https://x.com/PumPupSui",
   },
+  dapy: {
+    jumbotron_image: "/memecoins/pup-logo.jpg",
+    logo: "/memecoins/pup-logo.jpg",
+    url: "",
+    title: "DAPY",
+    description: `The first(and best) Casino Dog on Sui`,
+    tagline: "The first(and best) Casino Dog on Sui",
+    tags: [""],
+    twitter: "https://x.com/PumPupSui",
+  },
 };
 
 export const ALL_APP_LIST: Record<string, APP_INFO> = {
