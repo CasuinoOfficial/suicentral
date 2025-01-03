@@ -10,11 +10,10 @@ jobs:
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
 
     - name: Check for file modifications
       run: |
-        # Define the files or directories that can be modified
         FILES=(
           "public/defi",
           "public/gaming",
@@ -27,7 +26,7 @@ jobs:
 
         MAX_FILE_SIZE=$((2 * 1024 * 1024))
 
-        MODIFIED_FILES=$(git diff --name-only main)
+        MODIFIED_FILES=$(git diff --name-only origin/main)
 
         UNAUTHORIZED_CHANGE=false
 
