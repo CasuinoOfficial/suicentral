@@ -27,7 +27,7 @@ jobs:
 
         MAX_FILE_SIZE=$((2 * 1024 * 1024))
 
-        MODIFIED_FILES=$(git diff --name-only origin/main)
+        MODIFIED_FILES=$(git diff --name-only main)
 
         UNAUTHORIZED_CHANGE=false
 
